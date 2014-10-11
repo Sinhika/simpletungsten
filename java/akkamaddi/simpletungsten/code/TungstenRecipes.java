@@ -1,33 +1,55 @@
 package akkamaddi.simpletungsten.code;
 
-import net.minecraft.item.Item;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.block.Block;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import cpw.mods.fml.common.registry.GameRegistry;
-import alexndr.SimpleOres.plugins.fusion.FusionHelper;
-import alexndr.SimpleOres.api.helpers.CoreHelper;
+import alexndr.SimpleOres.core.Content;
+import alexndr.SimpleOres.plugins.fusion.FusionRecipes;
 
 public class TungstenRecipes
 {
-    public static void doTungstenRecipes()
+    @SuppressWarnings("unchecked")
+	public static void doTungstenRecipes()
     {
         // Ore Dictionary
-        OreDictionary.registerOre("ingotTungsten", new ItemStack(SimpleTungstenCore.tungstenIngot));
-        OreDictionary.registerOre("oreTungsten", new ItemStack(SimpleTungstenCore.oreTungsten));
-        OreDictionary.registerOre("ingotTungstenCarbide", new ItemStack(SimpleTungstenCore.tungstenCarbideIngot));
-        OreDictionary.registerOre("ingotValfram", new ItemStack(SimpleTungstenCore.valframIngot));
-        OreDictionary.registerOre("ingotTungstenSteel", new ItemStack(SimpleTungstenCore.tungstenSteelIngot));
-        OreDictionary.registerOre("ingotPrasinos", new ItemStack(SimpleTungstenCore.prasinosIngot));
+		OreDictionary.registerOre("ingotTungsten", new ItemStack(
+				SimpleTungstenCore.tungstenIngot));
+		OreDictionary.registerOre("oreTungsten", new ItemStack(
+				SimpleTungstenCore.oreTungsten));
+		OreDictionary.registerOre("ingotTungstenCarbide", new ItemStack(
+				SimpleTungstenCore.tungstenCarbideIngot));
+		OreDictionary.registerOre("ingotValfram", new ItemStack(
+				SimpleTungstenCore.valframIngot));
+		OreDictionary.registerOre("ingotTungstenSteel", new ItemStack(
+				SimpleTungstenCore.tungstenSteelIngot));
+		OreDictionary.registerOre("ingotPrasinos", new ItemStack(
+				SimpleTungstenCore.prasinosIngot));
+        
         // recipes: Crafting
         //Storage Block
-        GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockTungsten, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleTungstenCore.tungstenIngot});
-        GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockTungstenCarbide, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleTungstenCore.tungstenCarbideIngot});
-        GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockValfram, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleTungstenCore.valframIngot});
-        GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockTungstenSteel, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleTungstenCore.tungstenSteelIngot});
-        GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockPrasinos, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleTungstenCore.prasinosIngot});
+		GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockTungsten,
+				1), new Object[] { "AAA", "AAA", "AAA", 'A',
+				SimpleTungstenCore.tungstenIngot });
+		GameRegistry.addRecipe(new ItemStack(
+				SimpleTungstenCore.blockTungstenCarbide, 1), new Object[] {
+				"AAA", "AAA", "AAA", 'A',
+				SimpleTungstenCore.tungstenCarbideIngot });
+		GameRegistry.addRecipe(
+				new ItemStack(SimpleTungstenCore.blockValfram, 1),
+				new Object[] { "AAA", "AAA", "AAA", 'A',
+						SimpleTungstenCore.valframIngot });
+		GameRegistry.addRecipe(new ItemStack(
+				SimpleTungstenCore.blockTungstenSteel, 1),
+				new Object[] { "AAA", "AAA", "AAA", 'A',
+						SimpleTungstenCore.tungstenSteelIngot });
+		GameRegistry.addRecipe(new ItemStack(SimpleTungstenCore.blockPrasinos,
+				1), new Object[] { "AAA", "AAA", "AAA", 'A',
+				SimpleTungstenCore.prasinosIngot });
+        
         //Item Recipe
         //Ingot Recipe
         GameRegistry.addShapelessRecipe(new ItemStack(SimpleTungstenCore.tungstenIngot, 9), new Object[]
@@ -40,6 +62,7 @@ public class TungstenRecipes
                                         {SimpleTungstenCore.blockTungstenSteel});
         GameRegistry.addShapelessRecipe(new ItemStack(SimpleTungstenCore.prasinosIngot, 9), new Object[]
                                         {SimpleTungstenCore.blockPrasinos});
+        
         // Tungsten Carbide Chunks
         GameRegistry.addShapelessRecipe(new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem, 1), new Object[]
                                         {SimpleTungstenCore.smallTungstenCarbideChunkItem, SimpleTungstenCore.smallTungstenCarbideChunkItem, SimpleTungstenCore.smallTungstenCarbideChunkItem, SimpleTungstenCore.smallTungstenCarbideChunkItem, SimpleTungstenCore.smallTungstenCarbideChunkItem });
@@ -53,6 +76,7 @@ public class TungstenRecipes
                                         {SimpleTungstenCore.largeTungstenCarbideChunkItem });
         GameRegistry.addShapelessRecipe(new ItemStack(SimpleTungstenCore.smallTungstenCarbideChunkItem, 2), new Object[]
                                         {SimpleTungstenCore.mediumTungstenCarbideChunkItem });
+        
         // Valfram Chunks
         GameRegistry.addShapelessRecipe(new ItemStack(SimpleTungstenCore.largeValframChunkItem, 1), new Object[]
                                         {SimpleTungstenCore.smallValframChunkItem, SimpleTungstenCore.smallValframChunkItem, SimpleTungstenCore.smallValframChunkItem, SimpleTungstenCore.smallValframChunkItem, SimpleTungstenCore.smallValframChunkItem });
@@ -184,80 +208,365 @@ public class TungstenRecipes
                 {  "XXX", "X X", "X X", 'X', "ingotPrasinos" }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(SimpleTungstenCore.prasinosBoots, true, new Object[]
                 {  "X X", "X X", 'X', "ingotPrasinos" }));
+        
         // recipes: Smelting
-        GameRegistry.addSmelting(SimpleTungstenCore.oreTungsten.blockID, new ItemStack(SimpleTungstenCore.tungstenIngot), 0.8F);
-        GameRegistry.addSmelting(SimpleTungstenCore.largeTungstenCarbideChunkItem.itemID, new ItemStack(SimpleTungstenCore.tungstenCarbideIngot), 1.0F);
-        GameRegistry.addSmelting(SimpleTungstenCore.largeValframChunkItem.itemID, new ItemStack(SimpleTungstenCore.valframIngot), 1.4F);
-        GameRegistry.addSmelting(SimpleTungstenCore.largeTungstenSteelChunkItem.itemID, new ItemStack(SimpleTungstenCore.tungstenSteelIngot), 1.2F);
-        GameRegistry.addSmelting(SimpleTungstenCore.largePrasinosChunkItem.itemID, new ItemStack(SimpleTungstenCore.prasinosIngot), 1.6F);
+		GameRegistry.addSmelting(SimpleTungstenCore.oreTungsten, new ItemStack(
+				SimpleTungstenCore.tungstenIngot), 0.8F);
+		GameRegistry.addSmelting(
+				SimpleTungstenCore.largeTungstenCarbideChunkItem,
+				new ItemStack(SimpleTungstenCore.tungstenCarbideIngot), 1.0F);
+		GameRegistry.addSmelting(SimpleTungstenCore.largeValframChunkItem,
+				new ItemStack(SimpleTungstenCore.valframIngot), 1.4F);
+		GameRegistry.addSmelting(
+				SimpleTungstenCore.largeTungstenSteelChunkItem, new ItemStack(
+						SimpleTungstenCore.tungstenSteelIngot), 1.2F);
+		GameRegistry.addSmelting(SimpleTungstenCore.largePrasinosChunkItem,
+				new ItemStack(SimpleTungstenCore.prasinosIngot), 1.6F);
+        
         //Fusion Furnace Recipes
-        //Tungsten Carbide
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.brick), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(SimpleTungstenCore.smallTungstenCarbideChunkItem), 8.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.brick), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.mediumTungstenCarbideChunkItem), 10.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.brick), new ItemStack(Item.gunpowder), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 26.F);
-        //Tungsten Steel
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.ingotIron), new ItemStack(CoreHelper.coreContent.tinIngot), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 26.F);
-        //Valfram
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.netherrackBrick), new ItemStack(Item.gunpowder), new ItemStack(SimpleTungstenCore.smallValframChunkItem), 10.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.netherrackBrick), new ItemStack(Item.glowstone), new ItemStack(SimpleTungstenCore.mediumValframChunkItem), 12.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(Item.netherrackBrick), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 36.F);
-        //Prasinos
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(CoreHelper.coreContent.adamantiumIngot), new ItemStack(Item.glowstone), new ItemStack(SimpleTungstenCore.smallPrasinosChunkItem), 12.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(CoreHelper.coreContent.adamantiumIngot), new ItemStack(Item.magmaCream), new ItemStack(SimpleTungstenCore.mediumPrasinosChunkItem), 16.0F);
-        FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot), new ItemStack(CoreHelper.coreContent.adamantiumIngot), new ItemStack(Item.blazePowder), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 40.F);
+		// Tungsten Carbide
+		FusionRecipes
+				.addSmelting(
+						new ItemStack(SimpleTungstenCore.tungstenIngot),
+						new ItemStack(Items.brick),
+						new ItemStack(Items.dye, 1, 15),
+						new ItemStack(
+								SimpleTungstenCore.smallTungstenCarbideChunkItem),
+						8.0F);
+		FusionRecipes
+				.addSmelting(
+						new ItemStack(SimpleTungstenCore.tungstenIngot),
+						new ItemStack(Items.brick),
+						new ItemStack(Items.coal, 1,
+								OreDictionary.WILDCARD_VALUE),
+						new ItemStack(
+								SimpleTungstenCore.mediumTungstenCarbideChunkItem),
+						10.0F);
+		FusionRecipes
+				.addSmelting(
+						new ItemStack(SimpleTungstenCore.tungstenIngot),
+						new ItemStack(Items.brick),
+						new ItemStack(Items.gunpowder),
+						new ItemStack(
+								SimpleTungstenCore.largeTungstenCarbideChunkItem),
+						26.F);
+		// Tungsten Steel
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot),
+				new ItemStack(Items.iron_ingot), new ItemStack(
+						Content.tin_ingot), new ItemStack(
+						SimpleTungstenCore.largeTungstenSteelChunkItem), 26.F);
+		// Valfram
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot), new ItemStack(
+				Items.netherbrick), new ItemStack(Items.gunpowder),
+				new ItemStack(SimpleTungstenCore.smallValframChunkItem), 10.0F);
+		FusionRecipes
+				.addSmelting(new ItemStack(SimpleTungstenCore.tungstenIngot),
+						new ItemStack(Items.netherbrick), new ItemStack(
+								Items.glowstone_dust), new ItemStack(
+								SimpleTungstenCore.mediumValframChunkItem),
+						12.0F);
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot), new ItemStack(
+				Items.netherbrick), new ItemStack(Items.lava_bucket),
+				new ItemStack(SimpleTungstenCore.largeValframChunkItem), 36.F);
+		// Prasinos
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot), new ItemStack(
+				Content.adamantium_ingot), new ItemStack(
+				Items.glowstone_dust), new ItemStack(
+				SimpleTungstenCore.smallPrasinosChunkItem), 12.0F);
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot), new ItemStack(
+				Content.adamantium_ingot), new ItemStack(
+				Items.magma_cream), new ItemStack(
+				SimpleTungstenCore.mediumPrasinosChunkItem), 16.0F);
+		FusionRecipes.addSmelting(new ItemStack(
+				SimpleTungstenCore.tungstenIngot), new ItemStack(
+				Content.adamantium_ingot), new ItemStack(
+				Items.blaze_powder), new ItemStack(
+				SimpleTungstenCore.largePrasinosChunkItem), 40.F);
 
         if (SimpleTungstenCore.enableRecycling)
         {
             // Tungsten
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenHelm, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenChest, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten, 2, 0), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenLegs, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten, 2, 0), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenBoots, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSword, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenShovel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenPickaxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenAxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenHoe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
-            // Tungsten Carbide
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideHelm, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideChest, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem, 2, 0), 30.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideLegs, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem, 2, 0), 30.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideBoots, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideSword, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideShovel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbidePickaxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideAxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenCarbideHoe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Item.clay), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenCarbideChunkItem), 15.0F);
-            // Valfram
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframHelm, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframChest, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack, 2, 0), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem, 2, 0), 40.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframLegs, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack, 2, 0), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem, 2, 0), 40.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframBoots, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframSword, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframShovel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframPickaxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframAxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.valframHoe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.netherrack), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largeValframChunkItem), 20.0F);
-            // Tungsten Steel
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelHelm, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelChest, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem, 2, 0), 30.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelLegs, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.coal, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem, 2, 0), 30.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelBoots, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelSword, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelShovel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelPickaxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelAxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.tungstenSteelHoe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.coal, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(SimpleTungstenCore.largeTungstenSteelChunkItem), 15.0F);
-            // Prasinos
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosHelm, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosChest, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem, 2, 0), 50.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosLegs, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel, 2, 0), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem, 2, 0), 50.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosBoots, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosSword, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosShovel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosPickaxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosAxe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-            FusionHelper.fusionFurnaceRecipes.smelting().addSmelting(new ItemStack(SimpleTungstenCore.prasinosHoe, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Block.gravel), new ItemStack(Item.bucketLava), new ItemStack(SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
-        }
-    }
-}
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenHelm, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenChest, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.oreTungsten, 2, 0), 20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenLegs, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.oreTungsten, 2, 0), 20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenBoots, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSword, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenShovel, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenPickaxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenAxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenHoe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(SimpleTungstenCore.oreTungsten), 10.0F);
+			// Tungsten Carbide
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideHelm, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideChest, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball, 2,
+					0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.largeTungstenCarbideChunkItem, 2, 0),
+					30.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideLegs, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball, 2,
+					0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.largeTungstenCarbideChunkItem, 2, 0),
+					30.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideBoots, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideSword, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideShovel, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbidePickaxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideAxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenCarbideHoe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Items.clay_ball),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenCarbideChunkItem),
+					15.0F);
+			// Valfram
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframHelm, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframChest, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack, 2, 0), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem, 2,
+							0), 40.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframLegs, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack, 2, 0), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem, 2,
+							0), 40.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframBoots, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframSword, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframShovel, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframPickaxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframAxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.valframHoe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					Blocks.netherrack), new ItemStack(Items.lava_bucket),
+					new ItemStack(SimpleTungstenCore.largeValframChunkItem),
+					20.0F);
+			// Tungsten Steel
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelHelm, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelChest, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.largeTungstenSteelChunkItem, 2, 0),
+					30.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelLegs, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.coal, 2,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(
+					SimpleTungstenCore.largeTungstenSteelChunkItem, 2, 0),
+					30.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelBoots, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelSword, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelShovel, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelPickaxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelAxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.tungstenSteelHoe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
+					new ItemStack(
+							SimpleTungstenCore.largeTungstenSteelChunkItem),
+					15.0F);
+			// Prasinos
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosHelm, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosChest, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.lava_bucket), new ItemStack(
+					SimpleTungstenCore.largePrasinosChunkItem, 2, 0), 50.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosLegs, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel,
+					2, 0), new ItemStack(Items.lava_bucket), new ItemStack(
+					SimpleTungstenCore.largePrasinosChunkItem, 2, 0), 50.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosBoots, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosSword, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosShovel, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosPickaxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosAxe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+			FusionRecipes.addSmelting(new ItemStack(
+					SimpleTungstenCore.prasinosHoe, 1,
+					OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.gravel),
+					new ItemStack(Items.lava_bucket), new ItemStack(
+							SimpleTungstenCore.largePrasinosChunkItem), 25.0F);
+        } // end if recycling
+    } // end doTungstenRecipes()
+} // end class TungstenRecipes
