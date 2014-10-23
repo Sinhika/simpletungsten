@@ -1,5 +1,7 @@
 package akkamaddi.simpletungsten.code;
 
+import java.io.File;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.block.material.Material;
@@ -202,19 +204,22 @@ public class SimpleTungstenCore
     @EventHandler // used in 1.6.2
     public void preInit(FMLPreInitializationEvent event)
     {
-        // Stub Method
-        config = new Configuration(event.getSuggestedConfigurationFile());
+        File installDir = event.getModConfigurationDirectory();
+        File configDir = new File(installDir, "akkamaddi");
+        File configFile = new File(configDir, "simpletungsten.cfg");
+        Configuration config = new Configuration(configFile);
+
         config.load();
 
         //Adjustable Ore Spawn Rates
-        tungstenSpawnRate = config.get("11. Tungsten Ore Worldgen", "Tungsten Spawn Rate", 5).getInt();
-        tungstenVeinSize = config.get("11. Tungsten Ore Worldgen", "Tungsten Vein Size", 5).getInt();
-        tungstenSpawnHeight = config.get("11. Tungsten Ore Worldgen", "Tungsten Maximum Spawn Height", 18).getInt();
-        tungstenMinSpawnHeight = config.get("11. Tungsten Ore Worldgen", "Tungsten Minimum Spawn Height", 0).getInt();
+        tungstenSpawnRate = config.get("Tungsten Ore Worldgen", "Tungsten Spawn Rate", 5).getInt();
+        tungstenVeinSize = config.get("Tungsten Ore Worldgen", "Tungsten Vein Size", 5).getInt();
+        tungstenSpawnHeight = config.get("Tungsten Ore Worldgen", "Tungsten Maximum Spawn Height", 18).getInt();
+        tungstenMinSpawnHeight = config.get("Tungsten Ore Worldgen", "Tungsten Minimum Spawn Height", 0).getInt();
         // recycle
-        enableRecycling = config.get("12. Enable Recycling", "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
+        enableRecycling = config.get("Enable Recycling", "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
         //higher dimension
-        enableHigherDimensionGen = config.get("13. Higher World Gen", "Spawn Tungsten in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
+        enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Tungsten in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
 
         //Higher Dimensions
 
