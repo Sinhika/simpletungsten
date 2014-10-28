@@ -169,11 +169,17 @@ public class SimpleTungstenCore
     /**
      * ArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces for their max damage), new int[] {helmet defense, chestplate defense, leggings defense, boots defense}, enchantability)
      */
-    public static ArmorMaterial armorTungsten = EnumHelper.addArmorMaterial("TUNGSTEN", 24, new int[] {3, 4, 3, 3}, 8);
-    public static ArmorMaterial armorTungstenCarbide = EnumHelper.addArmorMaterial("TUNGSTENCARBIDE", 26, new int[] {4, 6, 5, 4}, 12);
-    public static ArmorMaterial armorValfram = EnumHelper.addArmorMaterial("VALFRAM", 28, new int[] {4, 7, 6, 4}, 20);
-    public static ArmorMaterial armorTungstenSteel = EnumHelper.addArmorMaterial("TUNGSTENSTEEL", 30, new int[] {4, 7, 6, 4}, 7);
-    public static ArmorMaterial armorPrasinos = EnumHelper.addArmorMaterial("PRASINOS", 45, new int[] {5, 9, 7, 5}, 11);
+	public static ArmorMaterial armorTungsten = EnumHelper.addArmorMaterial(
+			"TUNGSTEN", 24, new int[] { 3, 4, 3, 3 }, 8);
+	public static ArmorMaterial armorTungstenCarbide = EnumHelper
+			.addArmorMaterial("TUNGSTENCARBIDE", 26, new int[] { 4, 6, 5, 4 },
+					12);
+	public static ArmorMaterial armorValfram = EnumHelper.addArmorMaterial(
+			"VALFRAM", 28, new int[] { 4, 7, 6, 4 }, 20);
+	public static ArmorMaterial armorTungstenSteel = EnumHelper
+			.addArmorMaterial("TUNGSTENSTEEL", 30, new int[] { 4, 7, 6, 4 }, 7);
+	public static ArmorMaterial armorPrasinos = EnumHelper.addArmorMaterial(
+			"PRASINOS", 45, new int[] { 5, 9, 7, 5 }, 11);
 
     /**
      * Creating the Armor Renderers. This is simply so you can see the armor texture when you wear it.
@@ -186,11 +192,16 @@ public class SimpleTungstenCore
 
     // set tool properties
     // ToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
-    public static ToolMaterial toolTungsten = EnumHelper.addToolMaterial("TUNGSTEN", 2, 1320, 4.5F, 2, 6);
-    public static ToolMaterial toolTungstenCarbide = EnumHelper.addToolMaterial("TUNGSTENCARBIDE", 2, 1360, 15.0F, 3, 12);
-    public static ToolMaterial toolValfram = EnumHelper.addToolMaterial("VALFRAM", 3, 1420, 17.0F, 3, 20);
-    public static ToolMaterial toolTungstenSteel = EnumHelper.addToolMaterial("TUNGSTENSTEEL", 2, 1680, 10.0F, 3, 7);
-    public static ToolMaterial toolPrasinos = EnumHelper.addToolMaterial("PRASINOS", 4, 2640, 13.0F, 5, 9);
+	public static ToolMaterial toolTungsten = EnumHelper.addToolMaterial(
+			"TUNGSTEN", 2, 1320, 4.5F, 2, 6);
+	public static ToolMaterial toolTungstenCarbide = EnumHelper
+			.addToolMaterial("TUNGSTENCARBIDE", 2, 1360, 15.0F, 3, 12);
+	public static ToolMaterial toolValfram = EnumHelper.addToolMaterial(
+			"VALFRAM", 3, 1420, 17.0F, 3, 20);
+	public static ToolMaterial toolTungstenSteel = EnumHelper.addToolMaterial(
+			"TUNGSTENSTEEL", 2, 1680, 10.0F, 3, 7);
+	public static ToolMaterial toolPrasinos = EnumHelper.addToolMaterial(
+			"PRASINOS", 4, 2640, 13.0F, 5, 9);
 
     // Tab
     public void setTabIcons()
@@ -212,10 +223,14 @@ public class SimpleTungstenCore
         config.load();
 
         //Adjustable Ore Spawn Rates
-        tungstenSpawnRate = config.get("Tungsten Ore Worldgen", "Tungsten Spawn Rate", 5).getInt();
-        tungstenVeinSize = config.get("Tungsten Ore Worldgen", "Tungsten Vein Size", 5).getInt();
-        tungstenSpawnHeight = config.get("Tungsten Ore Worldgen", "Tungsten Maximum Spawn Height", 18).getInt();
-        tungstenMinSpawnHeight = config.get("Tungsten Ore Worldgen", "Tungsten Minimum Spawn Height", 0).getInt();
+		tungstenSpawnRate = config.get("Tungsten Ore Worldgen",
+				"Tungsten Spawn Rate", 5).getInt();
+		tungstenVeinSize = config.get("Tungsten Ore Worldgen",
+				"Tungsten Vein Size", 5).getInt();
+		tungstenSpawnHeight = config.get("Tungsten Ore Worldgen",
+				"Tungsten Maximum Spawn Height", 18).getInt();
+		tungstenMinSpawnHeight = config.get("Tungsten Ore Worldgen",
+				"Tungsten Minimum Spawn Height", 0).getInt();
         // recycle
         enableRecycling = config.get("Enable Recycling", "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
         //higher dimension
