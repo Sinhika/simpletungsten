@@ -34,7 +34,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid = "simpletungsten", name = "Simple Tungsten, and Tungsten alloys", 
-	version = "1.3.0", 
+	version = "1.7.10-1.3.1", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
 
 public class SimpleTungstenCore
