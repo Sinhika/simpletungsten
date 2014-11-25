@@ -34,7 +34,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid = "simpletungsten", name = "Simple Tungsten, and Tungsten alloys", 
-	version = "1.7.10-1.3.1", 
+	version = "1.7.10-1.3.2", 
 	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
 
 public class SimpleTungstenCore
@@ -157,7 +157,7 @@ public class SimpleTungstenCore
 
     //boolean
     public static boolean enableRecycling;
-
+    public static boolean itemizeMobs;
     public static boolean enableHigherDimensionGen;
 
     //Higher Dimensions
@@ -235,8 +235,11 @@ public class SimpleTungstenCore
         enableRecycling = config.get("Enable Recycling", "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
         //higher dimension
         enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Tungsten in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
-
-        //Higher Dimensions
+        itemizeMobs = config.get(Configuration.CATEGORY_GENERAL, 
+        		"Equip mobs with Tungsten gear, true or false", false).getBoolean(false);
+        
+        		
+        		//Higher Dimensions
 
         if (enableHigherDimensionGen)
         {
