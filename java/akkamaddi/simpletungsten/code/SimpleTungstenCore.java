@@ -232,16 +232,14 @@ public class SimpleTungstenCore
 		tungstenMinSpawnHeight = config.get("Tungsten Ore Worldgen",
 				"Tungsten Minimum Spawn Height", 0).getInt();
         // recycle
-        enableRecycling = config.get("Enable Recycling", "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
-        //higher dimension
-        enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Tungsten in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
+        enableRecycling = config.get(Configuration.CATEGORY_GENERAL, "Enable Tungsten & alloy recycling recipes: false or true?", false).getBoolean(false);
         itemizeMobs = config.get(Configuration.CATEGORY_GENERAL, 
         		"Equip mobs with Tungsten gear, true or false", false).getBoolean(false);
         
+        //higher dimension
+        enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Tungsten in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
         		
-        		//Higher Dimensions
-
-        if (enableHigherDimensionGen)
+         if (enableHigherDimensionGen)
         {
             dimensionIDsArray = config.get("Higher Dimensions", "Higher Dimensions ID List", new int[] {}).getIntList();
             System.out.println("Number of dimension ID's in the array = " + dimensionIDsArray.length);
@@ -542,6 +540,12 @@ public class SimpleTungstenCore
         blockTungstenCarbide.setHarvestLevel( "pickaxe", 0);
         blockValfram.setHarvestLevel( "pickaxe", 0);
 
+        ((SimpleBlock) blockTungsten).setAsBeaconBase(true);
+        ((SimpleBlock) blockTungstenSteel).setAsBeaconBase(true);
+        ((SimpleBlock) blockPrasinos).setAsBeaconBase(true);
+        ((SimpleBlock) blockTungstenCarbide).setAsBeaconBase(true);
+        ((SimpleBlock) blockValfram).setAsBeaconBase(true);
+        
         armorTungsten.customCraftingMaterial = SimpleTungstenCore.tungstenIngot;
         armorTungstenCarbide.customCraftingMaterial = SimpleTungstenCore.tungstenCarbideIngot;
         armorValfram.customCraftingMaterial = SimpleTungstenCore.valframIngot;
