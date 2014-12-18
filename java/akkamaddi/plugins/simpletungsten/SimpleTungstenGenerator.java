@@ -1,4 +1,4 @@
-package akkamaddi.simpletungsten.code;
+package akkamaddi.plugins.simpletungsten;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
-import akkamaddi.akkamaddiCore.api.AkkaWorldGenHelper;
+import akkamaddi.api.core.AkkaWorldGenHelper;
 
 public class SimpleTungstenGenerator implements IWorldGenerator {
 	/**
@@ -21,12 +21,12 @@ public class SimpleTungstenGenerator implements IWorldGenerator {
 	{
 		if (world.provider.dimensionId == 0) {
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
-		} else if (SimpleTungstenCore.enableHigherDimensionGen
-				&& SimpleTungstenCore.dimensionIDsArray.length >= 1) {
-			for (int i = 0; i < SimpleTungstenCore.dimensionIDsArray.length; i++) {
-				if (world.provider.dimensionId == SimpleTungstenCore.dimensionIDsArray[i]) {
+		} else if (SimpleTungsten.enableHigherDimensionGen
+				&& SimpleTungsten.dimensionIDsArray.length >= 1) {
+			for (int i = 0; i < SimpleTungsten.dimensionIDsArray.length; i++) {
+				if (world.provider.dimensionId == SimpleTungsten.dimensionIDsArray[i]) {
 					generateHigher(world, random, chunkX * 16, chunkZ * 16,
-							SimpleTungstenCore.dimensionIDsArray[i]);
+							SimpleTungsten.dimensionIDsArray[i]);
 				}
 			}
 		}
@@ -46,16 +46,16 @@ public class SimpleTungstenGenerator implements IWorldGenerator {
 	protected void generateSurface(World world, Random random, int blockX,
 			int blockZ) 
 	{
-		for (int x = 0; x < SimpleTungstenCore.tungstenSpawnRate; x++) 
+		for (int x = 0; x < SimpleTungsten.tungstenSpawnRate; x++) 
 		{
 			int Xcoord = blockX + random.nextInt(16);
-			int Ycoord = random.nextInt(SimpleTungstenCore.tungstenSpawnHeight
-					- SimpleTungstenCore.tungstenMinSpawnHeight);
+			int Ycoord = random.nextInt(SimpleTungsten.tungstenSpawnHeight
+					- SimpleTungsten.tungstenMinSpawnHeight);
 			int Zcoord = blockZ + random.nextInt(16);
-			new AkkaWorldGenHelper(SimpleTungstenCore.oreTungsten,
-					SimpleTungstenCore.tungstenVeinSize, Blocks.stone)
+			new AkkaWorldGenHelper(SimpleTungsten.oreTungsten,
+					SimpleTungsten.tungstenVeinSize, Blocks.stone)
 					.generate(world, random, Xcoord, Ycoord
-							+ SimpleTungstenCore.tungstenMinSpawnHeight, Zcoord);
+							+ SimpleTungsten.tungstenMinSpawnHeight, Zcoord);
 		}
 	}
 
@@ -71,28 +71,28 @@ public class SimpleTungstenGenerator implements IWorldGenerator {
 	protected void generateHigher(World world, Random random, int blockX,
 			int blockZ, int dimensionID) 
 	{
-		if (SimpleTungstenCore.enableHigherDimensionGen) 
+		if (SimpleTungsten.enableHigherDimensionGen) 
 		{
-			for (int i = 0; i < SimpleTungstenCore.dimensionIDsArray.length; i++) 
+			for (int i = 0; i < SimpleTungsten.dimensionIDsArray.length; i++) 
 			{
-				int tungstenRate = SimpleTungstenCore.config.get(
+				int tungstenRate = SimpleTungsten.config.get(
 						"Higher Dimension ID: " + dimensionID,
 						"Tungsten Spawn Rate", 6).getInt();
 
 				for (int x = 0; x < tungstenRate; x++) {
-					int maxHeight = SimpleTungstenCore.config.get(
+					int maxHeight = SimpleTungsten.config.get(
 							"Higher Dimension ID: " + dimensionID,
 							"Tungsten Maximum Spawn Height", 32).getInt();
-					int minHeight = SimpleTungstenCore.config.get(
+					int minHeight = SimpleTungsten.config.get(
 							"Higher Dimension ID: " + dimensionID,
 							"Tungsten Minimum Spawn Height", 0).getInt();
-					int veinSize = SimpleTungstenCore.config.get(
+					int veinSize = SimpleTungsten.config.get(
 							"Higher Dimension ID: " + dimensionID,
 							"Tungsten Vein Size", 6).getInt();
 					int Xcoord = blockX + random.nextInt(16);
 					int Ycoord = random.nextInt(maxHeight - minHeight);
 					int Zcoord = blockZ + random.nextInt(16);
-					new AkkaWorldGenHelper(SimpleTungstenCore.oreTungsten,
+					new AkkaWorldGenHelper(SimpleTungsten.oreTungsten,
 							veinSize, Blocks.stone).generate(world, random,
 							Xcoord, Ycoord + minHeight, Zcoord);
 				}
