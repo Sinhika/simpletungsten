@@ -1,5 +1,6 @@
 package akkamaddi.plugins.simpletungsten;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
@@ -8,12 +9,12 @@ import net.minecraftforge.common.util.EnumHelper;
 import akkamaddi.api.core.APIcore;
 import alexndr.api.content.inventory.SimpleTab;
 import alexndr.api.core.LogHelper;
+import alexndr.api.helpers.game.OreGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION, 
 	dependencies = "required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore")
@@ -60,7 +61,6 @@ public class SimpleTungsten
 		Content.setLoot();
 
 		MinecraftForge.EVENT_BUS.register(new HandlerArmor());
-		GameRegistry.registerWorldGenerator(new SimpleTungstenGenerator(), 1);
 		APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
 	}
 
@@ -76,6 +76,7 @@ public class SimpleTungsten
 		setTabIcons();
 		setRepairMaterials();
 		Recipes.initialize();
+		setOreGenSettings();
 	}
 
 	/**
@@ -172,4 +173,15 @@ public class SimpleTungsten
 		tabAkkamaddiTungsten.setIcon(new ItemStack(Content.oreTungsten));
 	}
 
+	/**
+	 * Registers each ore to be generated.
+	 */
+	private static void setOreGenSettings()
+	{
+		OreGenerator.INSTANCE.registerOreForGeneration(0, Content.oreTungsten,
+				Blocks.stone, Settings.tungstenVeinSize,
+				Settings.tungstenSpawnRate, Settings.tungstenMaxSpawnHeight,
+				Settings.tungstenMinSpawnHeight);
+	} // end setOreGenSettings()
+	
 } // end class SimpleTungsten

@@ -269,49 +269,55 @@ public class Content
 	{
 		blockTungsten = new SimpleBlock(Material.iron).modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(10.0F).setResistance(22.0F)
+				.setHardness(Settings.tungstenHardness)
+				.setResistance(Settings.tungstenResistance)
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockTungsten");
 
 		oreTungsten = new SimpleBlock(Material.iron).modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(4.0F).setResistance(10.0F)
+				.setHardness(Settings.tungstenOreHardness)
+				.setResistance(Settings.tungstenOreResistance)
 				.setStepSound(Block.soundTypeMetal).setBlockName("oreTungsten");
 
 		blockTungstenCarbide = ((SimpleBlock) new SimpleBlock(Material.iron)
 				.modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(10.0F).setResistance(22.0F)
+				.setHardness(Settings.tungstenCarbideHardness)
+				.setResistance(Settings.tungstenCarbideResistance)
 				.setStepSound(Block.soundTypeMetal)).setBeaconBase(true)
 				.setBlockName("blockTungstenCarbide");
 
 		blockValfram = ((SimpleBlock) new SimpleBlock(Material.iron)
 				.modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(10.0F).setResistance(22.0F)
+				.setHardness(Settings.valframHardness)
+				.setResistance(Settings.valframResistance)
 				.setStepSound(Block.soundTypeMetal)).setBeaconBase(true)
 				.setBlockName("blockValfram");
 
 		blockTungstenSteel = ((SimpleBlock) new SimpleBlock(Material.iron)
 				.modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(15.0F).setResistance(25.0F)
+				.setHardness(Settings.tungstenSteelHardness)
+				.setResistance(Settings.tungstenSteelResistance)
 				.setStepSound(Block.soundTypeMetal)).setBeaconBase(true)
 				.setBlockName("blockTungstenSteel");
 
 		blockPrasinos = ((SimpleBlock) new SimpleBlock(Material.iron)
 				.modId("simpletungsten")
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
-				.setHardness(18.0F).setResistance(32.0F)
+				.setHardness(Settings.prasinosHardness)
+				.setResistance(Settings.prasinosResistance)
 				.setStepSound(Block.soundTypeMetal)).setBeaconBase(true)
 				.setBlockName("blockPrasinos");
 
-		blockTungsten.setHarvestLevel("pickaxe", 0);
-		oreTungsten.setHarvestLevel("pickaxe", 2);
-		blockTungstenSteel.setHarvestLevel("pickaxe", 0);
-		blockPrasinos.setHarvestLevel("pickaxe", 0);
-		blockTungstenCarbide.setHarvestLevel("pickaxe", 0);
-		blockValfram.setHarvestLevel("pickaxe", 0);
+		blockTungsten.setHarvestLevel("pickaxe", Settings.tungstenHarvestLevel);
+		oreTungsten.setHarvestLevel("pickaxe", Settings.tungstenOreHarvestLevel);
+		blockTungstenSteel.setHarvestLevel("pickaxe", Settings.tungstenSteelHarvestLevel);
+		blockPrasinos.setHarvestLevel("pickaxe", Settings.prasinosHarvestLevel);
+		blockTungstenCarbide.setHarvestLevel("pickaxe", Settings.tungstenCarbideHarvestLevel);
+		blockValfram.setHarvestLevel("pickaxe", Settings.valframHarvestLevel);
 
 	} // end doBlocks()
 
