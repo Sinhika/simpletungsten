@@ -61,7 +61,6 @@ public class SimpleTungsten
 		Content.setLoot();
 
 		MinecraftForge.EVENT_BUS.register(new HandlerArmor());
-		APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
 	}
 
 

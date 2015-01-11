@@ -4,8 +4,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import akkamaddi.api.core.ASettings;
 import alexndr.api.core.LogHelper;
 
-public class Settings extends ASettings {
-	public static void createOrLoadSettings(FMLPreInitializationEvent event) {
+public class Settings extends ASettings 
+{
+	
+	public static void createOrLoadSettings(FMLPreInitializationEvent event) 
+	{
 		config = GetConfig(event, "akkamaddi", "simpletungsten.cfg");
 
 		try {
