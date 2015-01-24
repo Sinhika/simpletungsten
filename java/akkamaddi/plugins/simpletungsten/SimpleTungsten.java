@@ -161,7 +161,7 @@ public class SimpleTungsten
 		armorValfram.customCraftingMaterial = Content.valframIngot;
 		armorTungstenSteel.customCraftingMaterial = Content.tungstenSteelIngot;
 		armorPrasinos.customCraftingMaterial = Content.prasinosIngot;
-	}
+	} // end setRepairMaterials()
 
 	/**
 	 * Creating the custom tab using the API class "SimpleTab" and setting

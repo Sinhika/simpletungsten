@@ -6,7 +6,6 @@ import alexndr.api.core.LogHelper;
 
 public class Settings extends ASettings 
 {
-	
 	public static void createOrLoadSettings(FMLPreInitializationEvent event) 
 	{
 		config = GetConfig(event, "akkamaddi", "simpletungsten.cfg");
@@ -20,28 +19,27 @@ public class Settings extends ASettings
 			adjustOreSpawnRates();
 
 			// Armor Stat Modification
+			armorStatDefaults();
 			if (enableArmorStatModification) {
 				LogHelper.verboseInfo(ModInfo.ID,
 						"Armor Stat Modification enabled!");
 				customizeArmorStats();
 			} // end-if enableArmorStatModification
-			else
-				armorStatDefaults();
 
 			// Block Stat Modification
+			blockStatDefaults();
 			if (enableBlockStatModification) {
 				LogHelper.verboseInfo(ModInfo.ID,
 						"Block Stat Modification enabled!");
 				customizeBlockStats();
-			} else
-				blockStatDefaults();
+			}
 
+			toolStatDefaults();
 			if (enableToolStatModification) {
 				LogHelper.verboseInfo(ModInfo.ID,
 						"Tool Stat Modification enabled!");
 				customizeToolStats();
-			} else
-				toolStatDefaults();
+			}
 		} // end-try
 		catch (Exception e) {
 			LogHelper
@@ -99,58 +97,62 @@ public class Settings extends ASettings
 	 */
 	public static void customizeArmorStats() {
 		tungstenArmorDurability = config.getInt("Tungsten Armor Durability",
-				"Armor Stat Modification", 24, 0, 255,
+				"Armor Stat Modification", tungstenArmorDurability, 0, 255,
 				"Controls the durability of Tungsten Armor.");
 		tungstenArmorDamageReduction = config.get("Armor Stat Modification",
 				"Tungsten Armor Damage Reduction Array",
-				new int[] { 3, 4, 3, 3 }).getIntList();
+				tungstenArmorDamageReduction).getIntList();
 		tungstenArmorEnchantability = config.getInt(
-				"Tungsten Armor Enchantability", "Armor Stat Modification", 8,
+				"Tungsten Armor Enchantability", "Armor Stat Modification", 
+				tungstenArmorEnchantability,
 				0, 255, "Controls the enchantability of Tungsten Armor.");
 
 		tungstenCarbideArmorDurability = config.getInt(
 				"Tungsten Carbide Armor Durability", "Armor Stat Modification",
-				26, 0, 255,
+				tungstenCarbideArmorDurability, 0, 255,
 				"Controls the durability of Tungsten Carbide Armor.");
 		tungstenCarbideArmorDamageReduction = config.get(
 				"Armor Stat Modification",
 				"Tungsten Carbide Armor Damage Reduction Array",
-				new int[] { 4, 6, 5, 4 }).getIntList();
+				tungstenCarbideArmorDamageReduction).getIntList();
 		tungstenCarbideArmorEnchantability = config.getInt(
 				"Tungsten Carbide Armor Enchantability",
-				"Armor Stat Modification", 12, 0, 255,
+				"Armor Stat Modification", tungstenCarbideArmorEnchantability, 0, 255,
 				"Controls the enchantability of Tungsten Carbide Armor.");
 
 		valframArmorDurability = config.getInt("Valfram Armor Durability",
-				"Armor Stat Modification", 28, 0, 255,
+				"Armor Stat Modification", valframArmorDurability, 0, 255,
 				"Controls the durability of Valfram Armor.");
 		valframArmorDamageReduction = config.get("Armor Stat Modification",
 				"Valfram Armor Damage Reduction Array",
-				new int[] { 4, 7, 6, 4 }).getIntList();
+				valframArmorDamageReduction).getIntList();
 		valframArmorEnchantability = config.getInt(
-				"Valfram Armor Enchantability", "Armor Stat Modification", 20,
+				"Valfram Armor Enchantability", "Armor Stat Modification", 
+				valframArmorEnchantability,
 				0, 255, "Controls the enchantability of Valfram Armor.");
 
 		tungstenSteelArmorDurability = config.getInt(
 				"Tungsten Steel Armor Durability", "Armor Stat Modification",
-				24, 0, 255, "Controls the durability of Tungsten Steel Armor.");
+				tungstenSteelArmorDurability, 
+				0, 255, "Controls the durability of Tungsten Steel Armor.");
 		tungstenSteelArmorDamageReduction = config.get(
 				"Armor Stat Modification",
 				"Tungsten Steel Armor Damage Reduction Array",
-				new int[] { 4, 7, 6, 4 }).getIntList();
+				tungstenSteelArmorDamageReduction).getIntList();
 		tungstenSteelArmorEnchantability = config.getInt(
 				"Tungsten Steel Armor Enchantability",
-				"Armor Stat Modification", 7, 0, 255,
+				"Armor Stat Modification", tungstenSteelArmorEnchantability, 0, 255,
 				"Controls the enchantability of Tungsten Steel Armor.");
 
 		prasinosArmorDurability = config.getInt("Prasinos Armor Durability",
-				"Armor Stat Modification", 45, 0, 255,
+				"Armor Stat Modification", prasinosArmorDurability, 0, 255,
 				"Controls the durability of Prasinos Armor.");
 		prasinosArmorDamageReduction = config.get("Armor Stat Modification",
 				"Prasinos Armor Damage Reduction Array",
-				new int[] { 5, 9, 7, 5 }).getIntList();
+				prasinosArmorDamageReduction).getIntList();
 		prasinosArmorEnchantability = config.getInt(
-				"Prasinos Armor Enchantability", "Armor Stat Modification", 11,
+				"Prasinos Armor Enchantability", "Armor Stat Modification", 
+				prasinosArmorEnchantability,
 				0, 255, "Controls the enchantability of Prasinos Armor.");
 	} // end customizeArmorStatus
 
@@ -248,7 +250,8 @@ public class Settings extends ASettings
 	/**
 	 * Sets the default tool stats.
 	 */
-	public static void toolStatDefaults() {
+	public static void toolStatDefaults() 
+	{
 		tungstenMiningLevel = 2;
 		tungstenUsesNum = 1320;
 		tungstenMiningSpeed = 4.5F;
@@ -279,45 +282,46 @@ public class Settings extends ASettings
 	/**
 	 * set customized tool stats.
 	 */
-	public static void customizeToolStats() {
+	public static void customizeToolStats() 
+	{
 		tungstenMiningLevel = config
 				.getInt("Tungsten Mining Level",
 						"Tool Stat Modification",
-						2,
+						tungstenMiningLevel,
 						0,
 						255,
 						"Controls the mining level of Tungsten Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
 		tungstenUsesNum = config.getInt("Tungsten Tools Durability",
-				"Tool Stat Modification", 1320, 0, 32000,
+				"Tool Stat Modification", tungstenUsesNum, 0, 32000,
 				"Controls the number of uses Tungsten Tools have.");
 		tungstenMiningSpeed = config
 				.getFloat("Tungsten Mining Speed", "Tool Stat Modification",
-						4.5F, 0, 32000,
+						tungstenMiningSpeed, 0, 32000,
 						"Controls the speed at which Tungsten Tools harvest their appropriate blocks.");
 		tungstenDamageVsEntity = config
 				.getFloat("Tungsten Damage Vs. Entities",
-						"Tool Stat Modification", 2.0F, 0, 32000,
+						"Tool Stat Modification", tungstenDamageVsEntity, 0, 32000,
 						"Controls the amount of damage that Tungsten Tools will do to entities.");
 		tungstenEnchantability = config.getInt("Tungsten Tools Enchantability",
-				"Tool Stat Modification", 6, 0, 32000,
+				"Tool Stat Modification", tungstenEnchantability, 0, 32000,
 				"Controls the enchantability of Tungsten Tools.");
 
 		tungstenCarbideMiningLevel = config
 				.getInt("Tungsten Carbide Mining Level",
 						"Tool Stat Modification",
-						2,
+						tungstenCarbideMiningLevel,
 						0,
 						255,
 						"Controls the mining level of Tungsten Carbide Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
 		tungstenCarbideUsesNum = config.getInt(
 				"Tungsten Carbide Tools Durability", "Tool Stat Modification",
-				1360, 0, 32000,
+				tungstenCarbideUsesNum, 0, 32000,
 				"Controls the number of uses Tungsten Carbide Tools have.");
 		tungstenCarbideMiningSpeed = config
 				.getFloat(
 						"Tungsten Carbide Mining Speed",
 						"Tool Stat Modification",
-						15.0F,
+						tungstenCarbideMiningSpeed,
 						0,
 						32000,
 						"Controls the speed at which Tungsten Carbide Tools harvest their appropriate blocks.");
@@ -325,84 +329,84 @@ public class Settings extends ASettings
 				.getFloat(
 						"Tungsten Carbide Damage Vs. Entities",
 						"Tool Stat Modification",
-						3.0F,
+						tungstenCarbideDamageVsEntity,
 						0,
 						32000,
 						"Controls the amount of damage that Tungsten Carbide Tools will do to entities.");
 		tungstenCarbideEnchantability = config.getInt(
 				"Tungsten Carbide Tools Enchantability",
-				"Tool Stat Modification", 12, 0, 32000,
+				"Tool Stat Modification", tungstenCarbideEnchantability, 0, 32000,
 				"Controls the enchantability of Tungsten Carbide Tools.");
 
 		valframMiningLevel = config
 				.getInt("Valfram Mining Level",
 						"Tool Stat Modification",
-						3,
+						valframMiningLevel,
 						0,
 						255,
 						"Controls the mining level of Valfram Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
 		valframUsesNum = config.getInt("Valfram Tools Durability",
-				"Tool Stat Modification", 1420, 0, 32000,
+				"Tool Stat Modification", valframUsesNum, 0, 32000,
 				"Controls the number of uses Valfram Tools have.");
 		valframMiningSpeed = config
 				.getFloat("Valfram Mining Speed", "Tool Stat Modification",
-						17.0F, 0, 32000,
+						valframMiningSpeed, 0, 32000,
 						"Controls the speed at which Valfram Tools harvest their appropriate blocks.");
 		valframDamageVsEntity = config
 				.getFloat("Valfram Damage Vs. Entities",
-						"Tool Stat Modification", 3.0F, 0, 32000,
+						"Tool Stat Modification", valframDamageVsEntity, 0, 32000,
 						"Controls the amount of damage Valfram Tools will do to entities.");
 		valframEnchantability = config.getInt("Valfram Tools Enchantability",
-				"Tool Stat Modification", 20, 0, 32000,
+				"Tool Stat Modification", valframEnchantability, 0, 32000,
 				"Controls the enchantability of Valfram Tools.");
 
 		tungstenSteelMiningLevel = config
 				.getInt("Tungsten Steel Mining Level",
 						"Tool Stat Modification",
-						2,
+						tungstenSteelMiningLevel,
 						0,
 						255,
 						"Controls the mining level of Tungsten Steel Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
 		tungstenSteelUsesNum = config.getInt("Tungsten Steel Tools Durability",
-				"Tool Stat Modification", 1680, 0, 32000,
+				"Tool Stat Modification", tungstenSteelUsesNum, 0, 32000,
 				"Controls the number of uses Tungsten Steel Tools have.");
 		tungstenSteelMiningSpeed = config
 				.getFloat(
 						"Tungsten Steel Mining Speed",
 						"Tool Stat Modification",
-						10.0F,
+						tungstenSteelMiningSpeed,
 						0,
 						32000,
 						"Controls the speed at which Tungsten Steel Tools harvest their appropriate blocks.");
 		tungstenSteelDamageVsEntity = config
 				.getFloat("Tungsten Steel Damage Vs. Entities",
-						"Tool Stat Modification", 3.0F, 0, 32000,
+						"Tool Stat Modification", tungstenSteelDamageVsEntity, 0, 32000,
 						"Controls the amount of damage Tungsten Steel Tools will do to entities.");
 		tungstenSteelEnchantability = config.getInt(
 				"Tungsten Steel Tools Enchantability",
-				"Tool Stat Modification", 7, 0, 32000,
+				"Tool Stat Modification",tungstenSteelEnchantability, 0, 32000,
 				"Controls the enchantability of Tungsten Steel Tools.");
 
 		prasinosMiningLevel = config
 				.getInt("Prasinos Mining Level",
 						"Tool Stat Modification",
-						4,
+						prasinosMiningLevel,
 						0,
 						255,
 						"Controls the mining level of Prasinos Tools. 0 = wood, 1 = stone, 2 = iron, 3 = diamond.");
 		prasinosUsesNum = config.getInt("Prasinos Tools Durability",
-				"Tool Stat Modification", 2640, 0, 32000,
+				"Tool Stat Modification", prasinosUsesNum, 0, 32000,
 				"Controls the number of uses Prasinos Tools have.");
 		prasinosMiningSpeed = config
 				.getFloat("Prasinos Mining Speed", "Tool Stat Modification",
-						13.0F, 0, 32000,
+						prasinosMiningSpeed, 0, 32000,
 						"Controls the speed at which Prasinos Tools harvest their appropriate blocks.");
 		prasinosDamageVsEntity = config
 				.getFloat("Prasinos Damage Vs. Entity",
-						"Tool Stat Modification", 5.0F, 0, 32000,
+						"Tool Stat Modification",prasinosDamageVsEntity, 0, 32000,
 						"Controls the amount of damage Prasinos Tools will do to entities.");
 		prasinosEnchantability = config.getInt("Prasinos Tools Enchantability",
-				"Tool Stat Modification", 9, 0, 32000,
+				"Tool Stat Modification", prasinosEnchantability, 0, 32000,
 				"Controls the enchantability of Prasinos Tools.");
 
 	} // end customizeToolStats()
