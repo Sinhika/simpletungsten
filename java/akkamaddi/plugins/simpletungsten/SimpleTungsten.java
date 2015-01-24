@@ -6,7 +6,6 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
-import akkamaddi.api.core.APIcore;
 import alexndr.api.content.inventory.SimpleTab;
 import alexndr.api.core.LogHelper;
 import alexndr.api.helpers.game.OreGenerator;
@@ -17,7 +16,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, version = ModInfo.VERSION, 
-	dependencies = "required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore")
+	dependencies = "required-after:simplecore; required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore")
 
 public class SimpleTungsten 
 {
