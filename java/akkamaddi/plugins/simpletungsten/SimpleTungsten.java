@@ -7,7 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import alexndr.api.content.inventory.SimpleTab;
+import alexndr.api.core.ContentTypes;
 import alexndr.api.core.LogHelper;
+
 import alexndr.api.helpers.game.OreGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,7 +50,7 @@ public class SimpleTungsten
 	{
 		// Tab
 		LogHelper.info("Loading SimpleTungsten...");
-		tabAkkamaddiTungsten = new SimpleTab("tabAkkamaddiTungsten", "general");
+		tabAkkamaddiTungsten = new SimpleTab("tabAkkamaddiTungsten", ContentTypes.CreativeTab.GENERAL);
 		
 		//Configuration
 		Settings.createOrLoadSettings(event);
