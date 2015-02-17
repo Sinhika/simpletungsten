@@ -22,14 +22,6 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class SimpleTungsten 
 {
-	// The instance of your mod that Forge uses.
-	// @Instance("simpletungsten")
-	// public static SimpleTungsten instance;
-
-	// // Says where the client and server 'proxy' code is loaded.
-	// @SidedProxy(clientSide = "ClientProxy", serverSide = "CommonProxy")
-	// public static CommonProxy proxy;
-
 	// tab
 	public static SimpleTab tabAkkamaddiTungsten;
 
