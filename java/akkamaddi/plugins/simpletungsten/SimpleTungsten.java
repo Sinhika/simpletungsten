@@ -143,14 +143,14 @@ public class SimpleTungsten
 	private static void setRepairMaterials()
 	{
 		//Tools
-		toolTungsten.setRepairItem(new ItemStack(Content.prasinosIngot));
+		toolTungsten.setRepairItem(new ItemStack(Content.tungstenIngot));
 		toolTungstenCarbide.setRepairItem(new ItemStack(Content.tungstenCarbideIngot));
 		toolValfram.setRepairItem(new ItemStack(Content.valframIngot));
 		toolTungstenSteel.setRepairItem(new ItemStack(Content.tungstenSteelIngot));
 		toolPrasinos.setRepairItem(new ItemStack(Content.prasinosIngot));
 	
 		//Armor
-		armorTungsten.customCraftingMaterial = Content.prasinosIngot;
+		armorTungsten.customCraftingMaterial = Content.tungstenIngot;
 		armorTungstenCarbide.customCraftingMaterial = Content.tungstenCarbideIngot;
 		armorValfram.customCraftingMaterial = Content.valframIngot;
 		armorTungstenSteel.customCraftingMaterial = Content.tungstenSteelIngot;
