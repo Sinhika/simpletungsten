@@ -187,63 +187,63 @@ public class Settings extends ASettings
 	public static void customizeBlockStats() 
 	{
 		tungstenHardness = config.getFloat("Tungsten Hardness",
-				"Block Stat Modification", 10.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		tungstenResistance = config.getFloat("Tungsten Resistance",
-				"Block Stat Modification", 22.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		tungstenHarvestLevel = config.getInt("Tungsten Harvest Level",
-				"Block Stat Modification", 0, 0, 255,
+				"Block Stat Modification", tungstenHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 
 		tungstenOreHardness = config.getFloat("Tungsten Ore Hardness",
-				"Block Stat Modification", 4.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenOreHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		tungstenOreResistance = config.getFloat("Tungsten Ore Resistance",
-				"Block Stat Modification", 10.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenOreResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		tungstenOreHarvestLevel = config.getInt("Tungsten Ore Harvest Level",
-				"Block Stat Modification", 2, 0, 255,
+				"Block Stat Modification", tungstenOreHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 
 		tungstenCarbideHardness = config.getFloat("Tungsten Carbide Hardness",
-				"Block Stat Modification", 10.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenCarbideHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		tungstenCarbideResistance = config.getFloat("Tungsten Carbide Resistance",
-				"Block Stat Modification", 22.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenCarbideResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		tungstenCarbideHarvestLevel = config.getInt("Tungsten Carbide Harvest Level",
-				"Block Stat Modification", 0, 0, 255,
+				"Block Stat Modification", tungstenCarbideHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 
 		valframHardness = config.getFloat("Valfram Hardness",
-				"Block Stat Modification", 10.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", valframHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		valframResistance = config.getFloat("Valfram Resistance",
-				"Block Stat Modification", 22.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", valframResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		valframHarvestLevel = config.getInt("Valfram Harvest Level",
-				"Block Stat Modification", 0, 0, 255,
+				"Block Stat Modification", valframHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 
 		tungstenSteelHardness = config.getFloat("Tungsten Steel Hardness",
-				"Block Stat Modification", 15.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenSteelHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		tungstenSteelResistance = config.getFloat("Tungsten Steel Resistance",
-				"Block Stat Modification", 25.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", tungstenSteelResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		tungstenSteelHarvestLevel = config.getInt("Tungsten Steel Harvest Level",
-				"Block Stat Modification", 0, 0, 255,
+				"Block Stat Modification", tungstenSteelHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 
 		prasinosHardness = config.getFloat("Prasinos Hardness",
-				"Block Stat Modification", 18.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", prasinosHardness, 0.0F, 32000.0F,
 				"How many hits to break a block");
 		prasinosResistance = config.getFloat("Prasinos Resistance",
-				"Block Stat Modification", 32.0F, 0.0F, 32000.0F,
+				"Block Stat Modification", prasinosResistance, 0.0F, 32000.0F,
 				"Explosion Resistance");
 		prasinosHarvestLevel = config.getInt("Prasinos Harvest Level",
-				"Block Stat Modification", 0, 0, 255,
+				"Block Stat Modification", prasinosHarvestLevel, 0, 255,
 				"Tool level required to harvest this block");
 	} // end customizeBlockStats()
 

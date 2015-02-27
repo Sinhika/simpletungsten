@@ -54,7 +54,7 @@ public class SimpleTungsten
 		Content.setLoot();
 
 		MinecraftForge.EVENT_BUS.register(new HandlerArmor());
-	}
+	} // end preInit()
 
 
 	/**
