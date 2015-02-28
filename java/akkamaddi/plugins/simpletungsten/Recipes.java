@@ -9,6 +9,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import alexndr.api.core.LogHelper;
 import alexndr.plugins.Fusion.FusionFurnaceRecipes;
+import alexndr.plugins.Fusion.FusionMaterial;
 
 public class Recipes
 {
@@ -256,67 +257,70 @@ public class Recipes
 		// Tungsten Carbide
 		FusionFurnaceRecipes
 				.addSmelting(
-						new ItemStack(Content.tungstenIngot),
-						new ItemStack(Items.brick),
-						new ItemStack(Items.dye, 1, 15),
+						FusionMaterial.of("ingotTungsten"),
+						FusionMaterial.of(Items.brick),
+						FusionMaterial.of(Items.dye, 1, 15),
 						new ItemStack(
 								Content.smallTungstenCarbideChunkItem),
 						8.0F);
 		FusionFurnaceRecipes
 				.addSmelting(
-						new ItemStack(Content.tungstenIngot),
-						new ItemStack(Items.brick),
-						new ItemStack(Items.coal, 1,
-								OreDictionary.WILDCARD_VALUE),
+						FusionMaterial.of("ingotTungsten"),
+						FusionMaterial.of(Items.brick),
+						FusionMaterial.of(Items.coal, 1, OreDictionary.WILDCARD_VALUE),
 						new ItemStack(
 								Content.mediumTungstenCarbideChunkItem),
 						10.0F);
 		FusionFurnaceRecipes
 				.addSmelting(
-						new ItemStack(Content.tungstenIngot),
-						new ItemStack(Items.brick),
-						new ItemStack(Items.gunpowder),
+						FusionMaterial.of("ingotTungsten"),
+						FusionMaterial.of(Items.brick),
+						FusionMaterial.of(Items.gunpowder),
 						new ItemStack(
 								Content.largeTungstenCarbideChunkItem),
 						26.F);
+		
 		// Tungsten Steel
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot),
-				new ItemStack(Items.iron_ingot), new ItemStack(
-						alexndr.plugins.SimpleOres.Content.tin_ingot), 
-						new ItemStack(Content.largeTungstenSteelChunkItem), 26.F);
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"),
+				FusionMaterial.of("ingotIron"), 
+				FusionMaterial.of("ingotTin"), 
+				new ItemStack(Content.largeTungstenSteelChunkItem), 26.F);
+		
 		// Valfram
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot), new ItemStack(
-				Items.netherbrick), new ItemStack(Items.gunpowder),
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"),
+				FusionMaterial.of(Items.netherbrick),
+				FusionMaterial.of(Items.gunpowder), 
 				new ItemStack(Content.smallValframChunkItem), 10.0F);
-		FusionFurnaceRecipes
-				.addSmelting(new ItemStack(Content.tungstenIngot),
-						new ItemStack(Items.netherbrick), new ItemStack(
-								Items.glowstone_dust), new ItemStack(
-								Content.mediumValframChunkItem),
-						12.0F);
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot), new ItemStack(
-				Items.netherbrick), new ItemStack(Items.lava_bucket),
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"),
+				FusionMaterial.of(Items.netherbrick), 
+				FusionMaterial.of(Items.glowstone_dust), 
+				new ItemStack(
+						Content.mediumValframChunkItem), 12.0F);
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"),
+				FusionMaterial.of(Items.netherbrick), 
+				FusionMaterial.of(Items.lava_bucket), 
 				new ItemStack(Content.largeValframChunkItem), 36.F);
 		
 		// Prasinos
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot), new ItemStack(
-				alexndr.plugins.SimpleOres.Content.adamantium_ingot), new ItemStack(
-				Items.glowstone_dust), new ItemStack(
-				Content.smallPrasinosChunkItem), 12.0F);
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot), new ItemStack(
-				alexndr.plugins.SimpleOres.Content.adamantium_ingot), new ItemStack(
-				Items.magma_cream), new ItemStack(
-				Content.mediumPrasinosChunkItem), 16.0F);
-		FusionFurnaceRecipes.addSmelting(new ItemStack(
-				Content.tungstenIngot), new ItemStack(
-				alexndr.plugins.SimpleOres.Content.adamantium_ingot), new ItemStack(
-				Items.blaze_powder), new ItemStack(
-				Content.largePrasinosChunkItem), 40.F);
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"), 
+				FusionMaterial.of("ingotAdamantium"), 
+				FusionMaterial.of(Items.glowstone_dust), 
+				new ItemStack(Content.smallPrasinosChunkItem), 12.0F);
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"), 
+				FusionMaterial.of("ingotAdamantium"), 
+				FusionMaterial.of(Items.magma_cream), 
+				new ItemStack(Content.mediumPrasinosChunkItem), 16.0F);
+		FusionFurnaceRecipes.addSmelting(
+				FusionMaterial.of("ingotTungsten"), 
+				FusionMaterial.of("ingotAdamantium"), 
+				FusionMaterial.of(Items.blaze_powder), 
+				new ItemStack(Content.largePrasinosChunkItem), 40.F);
 
         if (Settings.enableRecycling)
         {
