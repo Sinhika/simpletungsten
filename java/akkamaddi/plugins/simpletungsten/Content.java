@@ -274,7 +274,7 @@ public class Content
 				.setStepSound(Block.soundTypeMetal)
 				.setBlockName("blockTungsten");
 
-		oreTungsten = new SimpleBlock(Material.iron).modId("simpletungsten")
+		oreTungsten = new SimpleBlock(Material.iron).modId("simpletungsten").isOre()
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
 				.setHardness(Settings.tungstenOreHardness)
 				.setResistance(Settings.tungstenOreResistance)
@@ -517,7 +517,7 @@ public class Content
 				8, 1);
 		LootHelper.addLoot("pyramidJungleChest", new ItemStack(prasinosIngot),
 				3, 5, 4);
-	}
+	} // end setLoot()
 
     //Tungsten items
     public static Item tungstenIngot;
