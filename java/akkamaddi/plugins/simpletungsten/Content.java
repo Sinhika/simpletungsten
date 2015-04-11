@@ -267,7 +267,7 @@ public class Content
 
 	public static void doBlocks() 
 	{
-		blockTungsten = new SimpleBlock(Material.iron).modId("simpletungsten")
+		blockTungsten = new SimpleBlock(Material.iron).modId("simpletungsten").setBeaconBase(true)
 				.setCreativeTab(SimpleTungsten.tabAkkamaddiTungsten)
 				.setHardness(Settings.tungstenHardness)
 				.setResistance(Settings.tungstenResistance)
