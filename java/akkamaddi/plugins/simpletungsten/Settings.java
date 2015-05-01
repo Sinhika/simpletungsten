@@ -57,17 +57,17 @@ public class Settings extends ASettings
 	 * loads/sets the ore generation variables.
 	 */
 	public static void adjustOreSpawnRates() {
-		tungstenSpawnRate = config.getInt("Tungsten Ore Worldgen",
-				"Tungsten Spawn Rate", 5, 0, 5000,
+		tungstenSpawnRate = config.getInt("Tungsten Spawn Rate", "Tungsten Ore Worldgen",
+				5, 0, 5000,
 				"Controls the spawn rate of Tungsten Ore.");
-		tungstenVeinSize = config.getInt("Tungsten Ore Worldgen",
-				"Tungsten Vein Size", 5, 0, 5000,
+		tungstenVeinSize = config.getInt("Tungsten Vein Size", "Tungsten Ore Worldgen",
+				5, 0, 5000,
 				"Controls the max vein size of Tungsten Ore.");
-		tungstenMaxSpawnHeight = config.getInt("Tungsten Ore Worldgen",
-				"Tungsten Maximum Spawn Height", 18, 0, 255,
+		tungstenMaxSpawnHeight = config.getInt("Tungsten Maximum Spawn Height", "Tungsten Ore Worldgen",
+				18, 0, 255,
 				"Controls the max spawn height of Tungsten Ore.");
-		tungstenMinSpawnHeight = config.getInt("Tungsten Ore Worldgen",
-				"Tungsten Minimum Spawn Height", 0, 0, 255,
+		tungstenMinSpawnHeight = config.getInt("Tungsten Minimum Spawn Height","Tungsten Ore Worldgen",
+				 0, 0, 255,
 				"Controls the min spawn height of Tungsten Ore.");
 	}
 
