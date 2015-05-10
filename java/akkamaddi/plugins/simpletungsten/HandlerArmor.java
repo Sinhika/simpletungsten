@@ -1,12 +1,12 @@
-package akkamaddi.simpletungsten.code;
+package akkamaddi.plugins.simpletungsten;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import akkamaddi.akkamaddiCore.api.SimpleArmorWithEffect;
-import akkamaddi.akkamaddiCore.api.SimpleArmorWithEffect.ARMOR_TYPE;
+import akkamaddi.api.core.SimpleArmorWithEffect;
+import akkamaddi.api.core.SimpleArmorWithEffect.ARMOR_TYPE;
 
 public class HandlerArmor
 {
@@ -23,10 +23,10 @@ public class HandlerArmor
 				if (armorbits[i] == null) return;
 			}
 
-			if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == SimpleTungstenCore.valframHelm
-					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == SimpleTungstenCore.valframChest
-					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == SimpleTungstenCore.valframLegs
-					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == SimpleTungstenCore.valframBoots) 
+			if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == Content.valframHelm
+					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == Content.valframChest
+					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == Content.valframLegs
+					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == Content.valframBoots) 
 			{
 				if (event.source.equals(DamageSource.lava)
 						|| event.source.equals(DamageSource.inFire)
@@ -37,10 +37,10 @@ public class HandlerArmor
 				}
 			} // end-if full suit of Valfram
 
-			else if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == SimpleTungstenCore.tungstenCarbideHelm
-					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == SimpleTungstenCore.tungstenCarbideChest
-					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == SimpleTungstenCore.tungstenCarbideLegs
-					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == SimpleTungstenCore.tungstenCarbideBoots)
+			else if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == Content.tungstenCarbideHelm
+					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == Content.tungstenCarbideChest
+					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == Content.tungstenCarbideLegs
+					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == Content.tungstenCarbideBoots)
 			{
 					if (event.source.equals(DamageSource.anvil)
 							|| event.source.equals(DamageSource.fallingBlock)
