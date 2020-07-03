@@ -1,0 +1,20 @@
+{
+    "pools": [
+        {
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ],
+            "entries": [
+                {
+                    "name": "simpletungsten:prasinos_block",
+                    "type": "minecraft:item"
+                }
+            ],
+            "name": "simpletungsten:droppool",
+            "rolls": 1
+        }
+    ],
+    "type": "minecraft:block"
+}
