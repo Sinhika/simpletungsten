@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "simpletungsten:block/tungsten_block"
+	}
+}
