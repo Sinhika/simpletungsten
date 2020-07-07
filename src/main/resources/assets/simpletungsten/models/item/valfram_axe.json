@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "simpletungsten:item/valfram_axe"
+    }
+}
