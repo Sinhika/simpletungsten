@@ -1,0 +1,25 @@
+{
+    "type": "fusion:alloying",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
+    "output": {
+        "item": "simpletungsten:tungsten_ore"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_hoe"
+        },
+        {
+            "item": "minecraft:gravel"
+        }
+    ],
+    "catalyst": {
+        "tag": "minecraft:coals"
+    },
+    "experience": 10.0,
+    "cookingtime": 600
+}

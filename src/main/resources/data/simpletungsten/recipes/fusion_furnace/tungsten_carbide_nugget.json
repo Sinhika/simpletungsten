@@ -1,0 +1,19 @@
+{
+    "type": "fusion:alloying",
+    "output": {
+        "item": "simpletungsten:tungsten_carbide_nugget"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_ingot"
+        },
+        {
+            "item": "minecraft:brick"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:bone_meal"
+    },
+    "experience": 8.0,
+    "cookingtime": 600
+}

@@ -1,0 +1,26 @@
+{
+    "type": "fusion:alloying",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
+    "output": {
+        "item": "simpletungsten:large_valfram_chunk",
+        "count": 2
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:valfram_chestplate"
+        },
+        {
+            "item": "minecraft:netherrack"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:lava_bucket"
+    },
+    "experience": 40.0,
+    "cookingtime": 600
+}

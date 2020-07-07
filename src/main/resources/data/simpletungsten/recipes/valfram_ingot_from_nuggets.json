@@ -1,0 +1,16 @@
+{
+    "key": {
+        "#": {
+            "item": "simpletungsten:valfram_nugget"
+        }
+    },
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "result": {
+        "item": "simpletungsten:valfram_ingot"
+    },
+    "type": "minecraft:crafting_shaped"
+}

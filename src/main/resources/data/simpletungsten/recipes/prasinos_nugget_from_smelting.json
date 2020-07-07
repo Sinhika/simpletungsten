@@ -1,0 +1,48 @@
+{
+    "cookingtime": 200,
+    "experience": 0.2,
+    "ingredient": [
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_axe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_hoe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_pickaxe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_shears"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_shovel"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_sword"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_boots"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_chestplate"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_helmet"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:prasinos_leggings"
+        }
+    ],
+    "result": "simpletungsten:prasinos_nugget",
+    "type": "minecraft:smelting"
+}

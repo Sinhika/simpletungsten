@@ -1,0 +1,12 @@
+{
+    "ingredients": [
+        {
+            "item": "simpletungsten:prasinos_ingot"
+        }
+    ],
+    "result": {
+        "count": 9,
+        "item": "simpletungsten:prasinos_nugget"
+    },
+    "type": "minecraft:crafting_shapeless"
+}

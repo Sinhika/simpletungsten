@@ -1,0 +1,19 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:valfram_ingot"
+        },
+        "T": {
+            "tag": "forge:rods/wooden"
+        }
+    },
+    "pattern": [
+        "SSS",
+        " T ",
+        " T "
+    ],
+    "result": {
+        "item": "simpletungsten:valfram_pickaxe"
+    },
+    "type": "minecraft:crafting_shaped"
+}

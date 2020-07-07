@@ -1,0 +1,48 @@
+{
+    "cookingtime": 100,
+    "experience": 0.2,
+    "ingredient": [
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_axe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_hoe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_pickaxe"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_shears"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_shovel"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_sword"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_boots"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_chestplate"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_helmet"
+        },
+        {
+            "count": 1,
+            "item": "simpletungsten:tungsten_leggings"
+        }
+    ],
+    "result": "simpletungsten:tungsten_nugget",
+    "type": "minecraft:blasting"
+}

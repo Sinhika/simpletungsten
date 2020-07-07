@@ -1,0 +1,16 @@
+{
+    "key": {
+        "#": {
+            "item": "simpletungsten:tungsten_steel_nugget"
+        }
+    },
+    "pattern": [
+        "###",
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "simpletungsten:large_tungsten_steel_chunk"
+    },
+    "type": "minecraft:crafting_shaped"
+}

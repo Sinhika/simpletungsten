@@ -1,0 +1,12 @@
+{
+    "ingredients": [
+        {
+            "item": "simpletungsten:large_tungsten_steel_chunk"
+        }
+    ],
+    "result": {
+        "count": 8,
+        "item": "simpletungsten:tungsten_steel_nugget"
+    },
+    "type": "minecraft:crafting_shapeless"
+}

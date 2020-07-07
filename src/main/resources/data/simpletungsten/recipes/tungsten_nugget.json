@@ -1,0 +1,12 @@
+{
+    "ingredients": [
+        {
+            "item": "simpletungsten:tungsten_ingot"
+        }
+    ],
+    "result": {
+        "count": 9,
+        "item": "simpletungsten:tungsten_nugget"
+    },
+    "type": "minecraft:crafting_shapeless"
+}

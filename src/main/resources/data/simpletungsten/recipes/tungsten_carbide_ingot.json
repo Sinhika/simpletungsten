@@ -1,0 +1,12 @@
+{
+    "ingredients": [
+        {
+            "item": "simpletungsten:tungsten_carbide_block"
+        }
+    ],
+    "result": {
+        "count": 9,
+        "item": "simpletungsten:tungsten_carbide_ingot"
+    },
+    "type": "minecraft:crafting_shapeless"
+}

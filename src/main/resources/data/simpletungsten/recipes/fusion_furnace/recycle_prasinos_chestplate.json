@@ -1,0 +1,26 @@
+{
+    "type": "fusion:alloying",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
+    "output": {
+        "item": "simpletungsten:large_prasinos_chunk",
+        "count": 2
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:prasinos_chestplate"
+        },
+        {
+            "item": "minecraft:gravel"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:lava_bucket"
+    },
+    "experience": 50.0,
+    "cookingtime": 600
+}

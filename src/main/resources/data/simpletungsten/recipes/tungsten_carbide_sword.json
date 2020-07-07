@@ -1,0 +1,19 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:tungsten_carbide_ingot"
+        },
+        "T": {
+            "tag": "forge:rods/wooden"
+        }
+    },
+    "pattern": [
+        " S ",
+        " S ",
+        " T "
+    ],
+    "result": {
+        "item": "simpletungsten:tungsten_carbide_sword"
+    },
+    "type": "minecraft:crafting_shaped"
+}

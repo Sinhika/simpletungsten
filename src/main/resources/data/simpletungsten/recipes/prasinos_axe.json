@@ -1,0 +1,19 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:prasinos_ingot"
+        },
+        "T": {
+            "tag": "forge:rods/wooden"
+        }
+    },
+    "pattern": [
+        "SS ",
+        "ST ",
+        " T "
+    ],
+    "result": {
+        "item": "simpletungsten:prasinos_axe"
+    },
+    "type": "minecraft:crafting_shaped"
+}

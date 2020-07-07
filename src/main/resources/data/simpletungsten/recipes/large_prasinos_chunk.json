@@ -1,0 +1,16 @@
+{
+    "key": {
+        "#": {
+            "item": "simpletungsten:prasinos_nugget"
+        }
+    },
+    "pattern": [
+        "###",
+        "# #",
+        "###"
+    ],
+    "result": {
+        "item": "simpletungsten:large_prasinos_chunk"
+    },
+    "type": "minecraft:crafting_shaped"
+}

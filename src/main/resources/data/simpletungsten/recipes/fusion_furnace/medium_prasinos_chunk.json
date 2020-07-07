@@ -1,0 +1,19 @@
+{
+    "type": "fusion:alloying",
+    "output": {
+        "item": "simpletungsten:medium_prasinos_chunk"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_ingot"
+        },
+        {
+            "item": "simpleores:adamantium"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:magma_cream"
+    },
+    "experience": 16.0,
+    "cookingtime": 600
+}

@@ -1,0 +1,16 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:tungsten_carbide_ingot"
+        }
+    },
+    "pattern": [
+        "SSS",
+        "S S",
+        "S S"
+    ],
+    "result": {
+        "item": "simpletungsten:tungsten_carbide_leggings"
+    },
+    "type": "minecraft:crafting_shaped"
+}

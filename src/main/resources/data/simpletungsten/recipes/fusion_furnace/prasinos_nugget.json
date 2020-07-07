@@ -1,0 +1,19 @@
+{
+    "type": "fusion:alloying",
+    "output": {
+        "item": "simpletungsten:prasinos_nugget"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_ingot"
+        },
+        {
+            "item": "simpleores:adamantium"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:glowstone_dust"
+    },
+    "experience": 12.0,
+    "cookingtime": 600
+}

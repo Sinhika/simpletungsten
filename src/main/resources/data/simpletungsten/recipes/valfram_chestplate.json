@@ -1,0 +1,16 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:valfram_ingot"
+        }
+    },
+    "pattern": [
+        "S S",
+        "SSS",
+        "SSS"
+    ],
+    "result": {
+        "item": "simpletungsten:valfram_chestplate"
+    },
+    "type": "minecraft:crafting_shaped"
+}

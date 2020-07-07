@@ -1,0 +1,19 @@
+{
+    "type": "fusion:alloying",
+    "output": {
+        "item": "simpletungsten:large_tungsten_carbide_chunk"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_ingot"
+        },
+        {
+            "item": "minecraft:brick"
+        }
+    ],
+    "catalyst": {
+        "item": "minecraft:gunpowder"
+    },
+    "experience": 26.0,
+    "cookingtime": 600
+}

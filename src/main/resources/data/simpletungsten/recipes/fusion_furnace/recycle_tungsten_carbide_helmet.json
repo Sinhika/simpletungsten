@@ -1,0 +1,25 @@
+{
+    "type": "fusion:alloying",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
+    "output": {
+        "item": "simpletungsten:large_tungsten_carbide_chunk"
+    },
+    "inputs": [
+        {
+            "item": "simpletungsten:tungsten_carbide_helmet"
+        },
+        {
+            "item": "minecraft:clay_ball"
+        }
+    ],
+    "catalyst": {
+        "tag": "minecraft:coals"
+    },
+    "experience": 15.0,
+    "cookingtime": 600
+}

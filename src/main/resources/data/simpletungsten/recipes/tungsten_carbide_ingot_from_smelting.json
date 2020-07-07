@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "simpletungsten:large_tungsten_carbide_chunk"
+    },
+    "result": "simpletungsten:tungsten_carbide_ingot",
+    "experience": 1.0,
+    "cookingtime": 200
+}

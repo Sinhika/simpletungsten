@@ -1,0 +1,15 @@
+{
+    "key": {
+        "S": {
+            "item": "simpletungsten:prasinos_ingot"
+        }
+    },
+    "pattern": [
+        "S S",
+        "S S"
+    ],
+    "result": {
+        "item": "simpletungsten:prasinos_boots"
+    },
+    "type": "minecraft:crafting_shaped"
+}
