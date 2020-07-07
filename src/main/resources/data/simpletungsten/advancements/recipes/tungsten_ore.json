@@ -1,0 +1,26 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:tungsten_ingot_from_blasting",
+            "simpletungsten:tungsten_ingot_from_smelting"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:tungsten_ore"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

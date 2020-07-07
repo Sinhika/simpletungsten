@@ -1,0 +1,27 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:tungsten_steel_ingot_from_blasting",
+            "simpletungsten:tungsten_steel_ingot_from_smelting",
+            "simpletungsten:tungsten_steel_nuggets_from_chunk"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:large_tungsten_steel_chunk"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

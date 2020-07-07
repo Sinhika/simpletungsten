@@ -1,0 +1,30 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:valfram_nugget_from_blasting",
+            "simpletungsten:valfram_nugget_from_smelting",
+            "simpletungsten:valfram_ingot_from_nuggets",
+            "simpletungsten:valfram_nuggets_from_medium",
+            "simpletungsten:large_valfram_chunk",
+            "simpletungsten:medium_valfram_chunk"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:valfram_nugget"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

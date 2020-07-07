@@ -1,0 +1,34 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:prasinos_sword",
+            "simpletungsten:prasinos_shovel",
+            "simpletungsten:prasinos_axe",
+            "simpletungsten:prasinos_pickaxe",
+            "simpletungsten:prasinos_hoe",
+            "simpletungsten:prasinos_helmet",
+            "simpletungsten:prasinos_chestplate",
+            "simpletungsten:prasinos_leggings",
+            "simpletungsten:prasinos_boots",
+            "simpletungsten:prasinos_block"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:prasinos_ingot"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

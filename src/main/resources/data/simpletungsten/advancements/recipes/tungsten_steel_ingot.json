@@ -1,0 +1,34 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:tungsten_steel_sword",
+            "simpletungsten:tungsten_steel_shovel",
+            "simpletungsten:tungsten_steel_axe",
+            "simpletungsten:tungsten_steel_pickaxe",
+            "simpletungsten:tungsten_steel_hoe",
+            "simpletungsten:tungsten_steel_helmet",
+            "simpletungsten:tungsten_steel_chestplate",
+            "simpletungsten:tungsten_steel_leggings",
+            "simpletungsten:tungsten_steel_boots",
+            "simpletungsten:tungsten_steel_block"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:tungsten_steel_ingot"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

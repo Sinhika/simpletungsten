@@ -1,0 +1,30 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:tungsten_carbide_nugget_from_blasting",
+            "simpletungsten:tungsten_carbide_nugget_from_smelting",
+            "simpletungsten:tungsten_carbide_ingot_from_nuggets",
+            "simpletungsten:tungsten_carbide_nuggets_from_medium",
+            "simpletungsten:large_tungsten_carbide_chunk",
+            "simpletungsten:medium_tungsten_carbide_chunk"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:tungsten_carbide_nugget"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}

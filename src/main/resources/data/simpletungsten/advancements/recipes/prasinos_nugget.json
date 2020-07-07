@@ -1,0 +1,30 @@
+{
+    "parent": "simpletungsten:recipes/root",
+    "rewards": {
+        "recipes": [
+            "simpletungsten:prasinos_nugget_from_blasting",
+            "simpletungsten:prasinos_nugget_from_smelting",
+            "simpletungsten:prasinos_ingot_from_nuggets",
+            "simpletungsten:prasinos_nuggets_from_medium",
+            "simpletungsten:large_prasinos_chunk",
+            "simpletungsten:medium_prasinos_chunk"
+        ]
+    },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "simpletungsten:prasinos_nugget"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_item"
+        ]
+    ]
+}
