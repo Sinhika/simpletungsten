@@ -17,85 +17,85 @@ fi
 cd $TARGETDIR
 
 # STORAGE RECIPES
-make_storage_recipes.py tungsten
-make_storage_recipes.py -L -M tungsten_carbide
-make_storage_recipes.py -L -M valfram
-make_storage_recipes.py -L tungsten_steel
-make_storage_recipes.py -L -M prasinos 
+make_storage_recipes.py -c tungsten
+make_storage_recipes.py -c -L -M tungsten_carbide
+make_storage_recipes.py -c -L -M valfram
+make_storage_recipes.py -c -L tungsten_steel
+make_storage_recipes.py -c -L -M prasinos 
 
 # TOOL & ARMOR RECIPES
-make_tool_recipes.py -a tungsten
-make_tool_recipes.py -a tungsten_carbide
-make_tool_recipes.py -a valfram
-make_tool_recipes.py -a tungsten_steel
-make_tool_recipes.py -a prasinos
+make_tool_recipes.py -a -c tungsten
+make_tool_recipes.py -a -c tungsten_carbide
+make_tool_recipes.py -a -c valfram
+make_tool_recipes.py -a -c tungsten_steel
+make_tool_recipes.py -a -c prasinos
 
 # ORE SMELTING
-make_custom_recipes.py -t smelting --xp=0.8 -f 'tungsten_ingot_from_smelting' \
+make_custom_recipes.py -t smelting -c --xp=0.8 -f 'tungsten_ingot_from_smelting' \
     -i 'simpletungsten:tungsten_ore' 'simpletungsten:tungsten_ingot' 1
-make_custom_recipes.py -t blasting --xp=0.8 -f 'tungsten_ingot_from_blasting' \
+make_custom_recipes.py -t blasting -c --xp=0.8 -f 'tungsten_ingot_from_blasting' \
     -i 'simpletungsten:tungsten_ore' 'simpletungsten:tungsten_ingot' 1
-make_custom_recipes.py -t smelting --xp=1.0 -f 'tungsten_carbide_ingot_from_smelting' \
+make_custom_recipes.py -t smelting -c --xp=1.0 -f 'tungsten_carbide_ingot_from_smelting' \
     -i 'simpletungsten:large_tungsten_carbide_chunk' \
     'simpletungsten:tungsten_carbide_ingot' 1
-make_custom_recipes.py -t blasting --xp=1.0 -f 'tungsten_carbide_ingot_from_blasting' \
+make_custom_recipes.py -t blasting -c --xp=1.0 -f 'tungsten_carbide_ingot_from_blasting' \
     -i 'simpletungsten:large_tungsten_carbide_chunk' \
     'simpletungsten:tungsten_carbide_ingot' 1
-make_custom_recipes.py -t smelting --xp=1.4 -f 'valfram_ingot_from_smelting' \
+make_custom_recipes.py -t smelting -c --xp=1.4 -f 'valfram_ingot_from_smelting' \
     -i 'simpletungsten:large_valfram_chunk' 'simpletungsten:valfram_ingot' 1
-make_custom_recipes.py -t blasting --xp=1.4 -f 'valfram_ingot_from_blasting' \
+make_custom_recipes.py -t blasting -c --xp=1.4 -f 'valfram_ingot_from_blasting' \
     -i 'simpletungsten:large_valfram_chunk' 'simpletungsten:valfram_ingot' 1
-make_custom_recipes.py -t smelting --xp=1.2 -f 'tungsten_steel_ingot_from_smelting' \
+make_custom_recipes.py -t smelting -c --xp=1.2 -f 'tungsten_steel_ingot_from_smelting' \
     -i 'simpletungsten:large_tungsten_steel_chunk' 'simpletungsten:tungsten_steel_ingot' 1
-make_custom_recipes.py -t blasting --xp=1.2 -f 'tungsten_steel_ingot_from_blasting' \
+make_custom_recipes.py -t blasting -c --xp=1.2 -f 'tungsten_steel_ingot_from_blasting' \
     -i 'simpletungsten:large_tungsten_steel_chunk' 'simpletungsten:tungsten_steel_ingot' 1
-make_custom_recipes.py -t smelting --xp=1.6 -f 'prasinos_ingot_from_smelting' \
+make_custom_recipes.py -t smelting -c --xp=1.6 -f 'prasinos_ingot_from_smelting' \
     -i 'simpletungsten:large_prasinos_chunk' 'simpletungsten:prasinos_ingot' 1
-make_custom_recipes.py -t blasting --xp=1.6 -f 'prasinos_ingot_from_blasting' \
+make_custom_recipes.py -t blasting -c --xp=1.6 -f 'prasinos_ingot_from_blasting' \
     -i 'simpletungsten:large_prasinos_chunk' 'simpletungsten:prasinos_ingot' 1
 
 # FUSION RECIPES
 # tungsten carbide
-make_custom_recipes.py -t fusion --xp=8.0 -f 'tungsten_carbide_nugget' \
+make_custom_recipes.py -t fusion -c --xp=8.0 -f 'tungsten_carbide_nugget' \
     --catalyst='minecraft:bone_meal' -a 'simpletungsten:tungsten_ingot;minecraft:brick' \
     'simpletungsten:tungsten_carbide_nugget' 1
-make_custom_recipes.py -t fusion --xp=10.0 -f 'medium_tungsten_carbide_chunk' \
+make_custom_recipes.py -t fusion -c --xp=10.0 -f 'medium_tungsten_carbide_chunk' \
     --catalyst='minecraft:coals' -a 'simpletungsten:tungsten_ingot;minecraft:brick' \
     'simpletungsten:medium_tungsten_carbide_chunk' 1
-make_custom_recipes.py -t fusion --xp=26.0 -f 'large_tungsten_carbide_chunk' \
+make_custom_recipes.py -t fusion -c --xp=26.0 -f 'large_tungsten_carbide_chunk' \
     --catalyst='minecraft:gunpowder' -a 'simpletungsten:tungsten_ingot;minecraft:brick' \
     'simpletungsten:large_tungsten_carbide_chunk' 1
 
 # tungsten steel
-make_custom_recipes.py -t fusion --xp=26.0 -f 'large_tungsten_steel_chunk' \
+make_custom_recipes.py -t fusion -c --xp=26.0 -f 'large_tungsten_steel_chunk' \
     --catalyst='simpleores:tin_ingot' \
     -a 'simpletungsten:tungsten_ingot;minecraft:iron_ingot' \
     'simpletungsten:large_tungsten_steel_chunk' 1
 
 # valfram
-make_custom_recipes.py -t fusion --xp=10.0 -f 'valfram_nugget' \
+make_custom_recipes.py -t fusion -c --xp=10.0 -f 'valfram_nugget' \
     --catalyst='minecraft:gunpowder' \
     -a 'simpletungsten:tungsten_ingot;minecraft:nether_brick' \
     'simpletungsten:valfram_nugget' 1
-make_custom_recipes.py -t fusion --xp=12.0 -f 'medium_valfram_chunk' \
+make_custom_recipes.py -t fusion -c --xp=12.0 -f 'medium_valfram_chunk' \
     --catalyst='minecraft:glowstone_dust' \
     -a 'simpletungsten:tungsten_ingot;minecraft:nether_brick' \
     'simpletungsten:medium_valfram_chunk' 1
-make_custom_recipes.py -t fusion --xp=36.0 -f 'large_valfram_chunk' \
+make_custom_recipes.py -t fusion -c --xp=36.0 -f 'large_valfram_chunk' \
     --catalyst='minecraft:lava_bucket' \
     -a 'simpletungsten:tungsten_ingot;minecraft:nether_brick' \
     'simpletungsten:large_valfram_chunk' 1
 
 # prasinos
-make_custom_recipes.py -t fusion --xp=12.0 -f 'prasinos_nugget' \
+make_custom_recipes.py -t fusion -c --xp=12.0 -f 'prasinos_nugget' \
     --catalyst='minecraft:glowstone_dust' \
     -a 'simpletungsten:tungsten_ingot;simpleores:adamantium' \
     'simpletungsten:prasinos_nugget' 1
-make_custom_recipes.py -t fusion --xp=16.0 -f 'medium_prasinos_chunk' \
+make_custom_recipes.py -t fusion -c --xp=16.0 -f 'medium_prasinos_chunk' \
     --catalyst='minecraft:magma_cream' \
     -a 'simpletungsten:tungsten_ingot;simpleores:adamantium' \
     'simpletungsten:medium_prasinos_chunk' 1
-make_custom_recipes.py -t fusion --xp=40.0 -f 'large_prasinos_chunk' \
+make_custom_recipes.py -t fusion -c --xp=40.0 -f 'large_prasinos_chunk' \
     --catalyst='minecraft:blaze_powder' \
     -a 'simpletungsten:tungsten_ingot;simpleores:adamantium' \
     'simpletungsten:large_prasinos_chunk' 1

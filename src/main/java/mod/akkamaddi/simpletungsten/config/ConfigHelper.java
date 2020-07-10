@@ -1,5 +1,6 @@
 package mod.akkamaddi.simpletungsten.config;
 
+import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraftforge.fml.config.ModConfig;
 
 /**
@@ -14,7 +15,19 @@ public final class ConfigHelper
 
     public static void bakeServer(final ModConfig config)
     {
+        SimpleTungstenConfig.enableTungstenOre = ConfigHolder.SERVER.serverEnableTungstenOre.get();
+        SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
+        SimpleTungstenConfig.tungsten_cfg = new CountRangeConfig(ConfigHolder.SERVER.serverTungstenVeinCount.get(),
+                ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 0, ConfigHolder.SERVER.serverTungstenMaxHeight.get());
 
+        // recipe flags
+        SimpleTungstenConfig.INSTANCE.putFlag("tungsten_recipes", ConfigHolder.SERVER.serverEnableTungstenRecipes.get());
+        SimpleTungstenConfig.INSTANCE.putFlag("tungsten_carbide_recipes", ConfigHolder.SERVER.serverEnableTungstenCarbideRecipes.get());
+        SimpleTungstenConfig.INSTANCE.putFlag("tungsten_steel_recipes", ConfigHolder.SERVER.serverEnableTungstenSteelRecipes.get());
+        SimpleTungstenConfig.INSTANCE.putFlag("valfram_recipes", ConfigHolder.SERVER.serverEnableValframRecipes.get());
+        SimpleTungstenConfig.INSTANCE.putFlag("prasinos_recipes", ConfigHolder.SERVER.serverEnablePrasinosRecipes.get());
+        SimpleTungstenConfig.INSTANCE.putFlag("recycling_recipes", ConfigHolder.SERVER.serverEnableRecyclingRecipes.get());
+        
     } // end bakeServer()
 
     public static void bakeClient(final ModConfig config) 
