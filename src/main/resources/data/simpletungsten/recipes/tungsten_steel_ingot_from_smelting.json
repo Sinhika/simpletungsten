@@ -1,5 +1,11 @@
 {
     "type": "minecraft:smelting",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
     "ingredient": {
         "item": "simpletungsten:large_tungsten_steel_chunk"
     },

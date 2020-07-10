@@ -1,5 +1,11 @@
 {
     "type": "minecraft:blasting",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
     "ingredient": {
         "item": "simpletungsten:tungsten_ore"
     },

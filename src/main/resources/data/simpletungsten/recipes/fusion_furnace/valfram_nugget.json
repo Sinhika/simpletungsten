@@ -1,5 +1,11 @@
 {
     "type": "fusion:alloying",
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "simpletungsten_enabled"
+        }
+    ],
     "output": {
         "item": "simpletungsten:valfram_nugget"
     },

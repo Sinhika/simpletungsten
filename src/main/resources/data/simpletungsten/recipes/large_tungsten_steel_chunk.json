@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "tungsten_steel_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "key": {
         "#": {
             "item": "simpletungsten:tungsten_steel_nugget"

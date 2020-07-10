@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "tungsten_carbide_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "ingredients": [
         {
             "item": "simpletungsten:large_tungsten_carbide_chunk"

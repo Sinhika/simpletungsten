@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "prasinos_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "key": {
         "#": {
             "item": "simpletungsten:prasinos_nugget"

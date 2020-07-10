@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "tungsten_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "key": {
         "S": {
             "item": "simpletungsten:tungsten_ingot"

@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "tungsten_carbide_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "key": {
         "S": {
             "item": "simpletungsten:tungsten_carbide_ingot"

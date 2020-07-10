@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "valfram_tools_enabled",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "ingredients": [
         {
             "item": "simpletungsten:valfram_block"
