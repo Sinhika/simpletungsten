@@ -10,7 +10,7 @@ TODO List
 - <s>set up config files and values</s>  
 - <s>change names of conditions in recipes to match config.</s>  
 - <s>define armor and tool materials</s>  
-- armor set effect handlers  
+- <s>armor set effect handlers</s>  
 - <s>initialize blocks</s>  
 - initialize items  
 	* <s>initialize simple items</s>  
