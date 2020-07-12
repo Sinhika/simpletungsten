@@ -1,7 +1,7 @@
 {
     "conditions": [
         {
-            "flag": "valfram_tools_enabled",
+            "flag": "valfram_recipes",
             "type": "simpletungsten:flag"
         }
     ],

@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "type": "simpletungsten:flag",
+            "flag": "valfram_recipes"
+        }
+    ],
     "cookingtime": 200,
     "experience": 0.2,
     "ingredient": [

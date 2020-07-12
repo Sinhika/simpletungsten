@@ -1,7 +1,7 @@
 {
     "conditions": [
         {
-            "flag": "prasinos_tools_enabled",
+            "flag": "prasinos_recipes",
             "type": "simpletungsten:flag"
         }
     ],

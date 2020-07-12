@@ -7,8 +7,8 @@ Binary and documentation hosted on CurseForge at TBD.
 TODO List
 ---------
 - <s>add forge tags</s>
-- set up config files and values
-- change name of recycling condition in recipes to match config.
+- <s>set up config files and values</s>
+- change names of conditions in recipes to match config.
 - define armor and tool materials
 - initialize blocks
 - initialize items

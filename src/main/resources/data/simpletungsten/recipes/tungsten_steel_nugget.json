@@ -1,7 +1,7 @@
 {
     "conditions": [
         {
-            "flag": "tungsten_steel_tools_enabled",
+            "flag": "tungsten_steel_recipes",
             "type": "simpletungsten:flag"
         }
     ],

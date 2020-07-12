@@ -3,7 +3,7 @@
     "conditions": [
         {
             "type": "simpletungsten:flag",
-            "flag": "simpletungsten_enabled"
+            "flag": "tungsten_carbide_recipes"
         }
     ],
     "output": {

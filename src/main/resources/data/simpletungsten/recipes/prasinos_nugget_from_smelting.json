@@ -1,4 +1,10 @@
 {
+    "conditions": [
+        {
+            "flag": "prasinos_recipes",
+            "type": "simpletungsten:flag"
+        }
+    ],
     "cookingtime": 200,
     "experience": 0.2,
     "ingredient": [
