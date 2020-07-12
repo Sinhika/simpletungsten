@@ -9,10 +9,10 @@ TODO List
 - <s>add forge tags</s>
 - <s>set up config files and values</s>
 - <s>change names of conditions in recipes to match config.</s>
-- define armor and tool materials
+- <s>define armor and tool materials</s>
 - armor set effect handlers
 - initialize blocks
-- initialize items
+- initialize items - simple Items done.
 - do ore generation
 
 License
