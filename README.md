@@ -6,14 +6,17 @@ Binary and documentation hosted on CurseForge at TBD.
 
 TODO List
 ---------
-- <s>add forge tags</s>
-- <s>set up config files and values</s>
-- <s>change names of conditions in recipes to match config.</s>
-- <s>define armor and tool materials</s>
-- armor set effect handlers
-- initialize blocks
-- initialize items - simple Items done.
-- do ore generation
+- <s>add forge tags</s>  
+- <s>set up config files and values</s>  
+- <s>change names of conditions in recipes to match config.</s>  
+- <s>define armor and tool materials</s>  
+- armor set effect handlers  
+- <s>initialize blocks</s>  
+- initialize items  
+	* <s>initialize simple items</s>  
+   	* initialize tools  
+   	* initialize armors  
+- do ore generation  
 
 License
 -------
