@@ -12,10 +12,10 @@ TODO List
 - <s>define armor and tool materials</s>  
 - <s>armor set effect handlers</s>  
 - <s>initialize blocks</s>  
-- initialize items  
+- <s>initialize items</s>  
 	* <s>initialize simple items</s>  
-   	* initialize tools  
-   	* initialize armors  
+   	* <s>initialize tools</s>  
+   	* <s>initialize armors</s>  
 - do ore generation  
 
 License
