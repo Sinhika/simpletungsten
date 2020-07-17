@@ -46,7 +46,7 @@ public final class ModBlocks
                     .hardnessAndResistance(10.0F, 22.0F)
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
-    public static final RegistryObject<SimpleMetalBlock> valfram_block = BLOCKS.register("tungsten_carbide_block", 
+    public static final RegistryObject<SimpleMetalBlock> valfram_block = BLOCKS.register("valfram_block", 
             () -> new SimpleMetalBlock(Block.Properties.create(Material.IRON,
                     MaterialColor.RED_TERRACOTTA)
                     .hardnessAndResistance(10.0F, 22.0F)
