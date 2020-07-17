@@ -36,12 +36,12 @@ made with tungsten, and two tungsten alloys.
     modId="simpleores"
     mandatory=true
     versionRange="[1.15.2-2.1.8.0,]"
-    ordering="NONE"
+    ordering="BEFORE"
     side="BOTH"    
 
 [[dependencies.simpletungsten]]
     modId="fusion"
     mandatory=true
     versionRange="[1.15.2-2.5.9.0,]"
-    ordering="NONE"
+    ordering="BEFORE"
     side="BOTH"    
