@@ -67,5 +67,8 @@
     "item.simpletungsten.prasinos_helmet": "Prasinos Helm",
     "item.simpletungsten.prasinos_chestplate": "Prasinos Chestplate",
     "item.simpletungsten.prasinos_leggings": "Prasinos Leggings",
-    "item.simpletungsten.prasinos_boots": "Prasinos Boots"
+    "item.simpletungsten.prasinos_boots": "Prasinos Boots",
+    
+    "simpletungsten.valfram_armor.info": "§aSet Bonus: No fire/lava damage.",
+    "simpletungsten.tungsten_carbide_armor.info": "§aSet Bonus: No falling block damage."
 }
