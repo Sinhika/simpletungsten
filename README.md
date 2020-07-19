@@ -16,7 +16,7 @@ TODO List
 	* <s>initialize simple items</s>  
    	* <s>initialize tools</s>  
    	* <s>initialize armors</s>  
-- do ore generation  
+- <s>do ore generation</s>  
 
 License
 -------
