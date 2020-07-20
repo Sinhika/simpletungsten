@@ -2,15 +2,15 @@ package mod.akkamaddi.simpletungsten.content;
 
 import java.util.function.Supplier;
 
+import mod.akkamaddi.simpletungsten.init.ModItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.util.LazyLoadBase;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import mod.akkamaddi.simpletungsten.init.ModItems;
 
 public enum SimpleTungstenArmorMaterial implements IArmorMaterial 
 {
@@ -38,7 +38,7 @@ public enum SimpleTungstenArmorMaterial implements IArmorMaterial
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadBase<Ingredient> repairMaterial;
 
     private SimpleTungstenArmorMaterial(String nameIn, int maxDamageIn, int[] drAmtArray, int enchantabilityIn,
             SoundEvent soundIn, float toughnessIn, Supplier<Ingredient> repairMatIn)
@@ -49,7 +49,7 @@ public enum SimpleTungstenArmorMaterial implements IArmorMaterial
         enchantability = enchantabilityIn;
         soundEvent = soundIn;
         toughness = toughnessIn;
-        repairMaterial = new LazyValue<>(repairMatIn);
+        repairMaterial = new LazyLoadBase<>(repairMatIn);
     } // end ctor()
 
     @Override

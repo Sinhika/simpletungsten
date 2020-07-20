@@ -38,10 +38,14 @@ public class OreGeneration
                 // Overworld
                 if (SimpleTungstenConfig.enableTungstenOre)
                 {
-                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                            .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE,
-                                    ModBlocks.tungsten_ore.get().getDefaultState(), SimpleTungstenConfig.tungsten_veinsize))
-                            .withPlacement(Placement.COUNT_RANGE.configure(SimpleTungstenConfig.tungsten_cfg)));
+                    biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                            Biome.createDecoratedFeature(Feature.ORE,
+                                                         new OreFeatureConfig(
+                                                                 OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                                                                 ModBlocks.tungsten_ore.get().getDefaultState(),
+                                                                 SimpleTungstenConfig.tungsten_veinsize),
+                                                         Placement.COUNT_RANGE,
+                                                         SimpleTungstenConfig.tungsten_cfg));
                 }
             } // end-else all others
         } // end-for Biome

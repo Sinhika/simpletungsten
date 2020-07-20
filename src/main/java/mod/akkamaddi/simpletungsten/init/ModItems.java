@@ -19,8 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public final class ModItems
 {
-    public static final DeferredRegister<Item> ITEMS = 
-            DeferredRegister.create(ForgeRegistries.ITEMS, SimpleTungsten.MODID);
+    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<Item>(ForgeRegistries.ITEMS, SimpleTungsten.MODID);
     
     // Simple Items: ingots, chunks, nuggets
     public static final RegistryObject<Item> tungsten_ingot = ITEMS.register("tungsten_ingot",

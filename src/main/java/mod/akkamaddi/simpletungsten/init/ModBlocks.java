@@ -24,8 +24,7 @@ import net.minecraftforge.registries.ForgeRegistries;
  */
 public final class ModBlocks
 {
-    public static final DeferredRegister<Block> BLOCKS = 
-            DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleTungsten.MODID);
+    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<Block>(ForgeRegistries.BLOCKS, SimpleTungsten.MODID);
     
     // Ore Block
     public static final RegistryObject<OreBlock> tungsten_ore = BLOCKS.register("tungsten_ore",
