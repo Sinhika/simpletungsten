@@ -1,26 +1,32 @@
 {
 	"type": "minecraft:crafting_shapeless",
+    "conditions": [
+        {
+            "flag": "prasinos_recipes",
+            "type": "simpletungsten:flag"
+        }
+    ],
 	"ingredients": [
 		{
-			"item": "fusion:prasinos_nugget"
+			"item": "simpletungsten:prasinos_nugget"
 		},
 		{
-			"item": "fusion:prasinos_nugget"
+			"item": "simpletungsten:prasinos_nugget"
 		},
 		{
-			"item": "fusion:prasinos_nugget"
+			"item": "simpletungsten:prasinos_nugget"
 		},
 		{
-			"item": "fusion:prasinos_nugget"
+			"item": "simpletungsten:prasinos_nugget"
 		},
 		{
-			"item": "fusion:prasinos_nugget"
+			"item": "simpletungsten:prasinos_nugget"
 		},
 		{
-			"item": "fusion:medium_prasinos_chunk"
+			"item": "simpletungsten:medium_prasinos_chunk"
 		}
 	],
 	"result": {
-		"item": "fusion:large_prasinos_chunk"
+		"item": "simpletungsten:large_prasinos_chunk"
 	}
 }

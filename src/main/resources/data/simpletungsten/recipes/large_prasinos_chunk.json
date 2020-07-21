@@ -7,13 +7,13 @@
     ],
 	"ingredients": [
 		{
-			"item": "fusion:medium_prasinos_chunk"
+			"item": "simpletungsten:medium_prasinos_chunk"
 		},
 		{
-			"item": "fusion:medium_prasinos_chunk"
+			"item": "simpletungsten:medium_prasinos_chunk"
 		},
 		{
-			"item" : "fusion:prasinos_nugget"
+			"item" : "simpletungsten:prasinos_nugget"
 		}		
 	],
     "result": {

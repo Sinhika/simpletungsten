@@ -1,26 +1,32 @@
 {
 	"type": "minecraft:crafting_shapeless",
+   "conditions": [
+        {
+            "flag": "tungsten_carbide_recipes",
+            "type": "simpletungsten:flag"
+        }
+    ],
 	"ingredients": [
 		{
-			"item": "fusion:tungsten_carbide_nugget"
+			"item": "simpletungsten:tungsten_carbide_nugget"
 		},
 		{
-			"item": "fusion:tungsten_carbide_nugget"
+			"item": "simpletungsten:tungsten_carbide_nugget"
 		},
 		{
-			"item": "fusion:tungsten_carbide_nugget"
+			"item": "simpletungsten:tungsten_carbide_nugget"
 		},
 		{
-			"item": "fusion:tungsten_carbide_nugget"
+			"item": "simpletungsten:tungsten_carbide_nugget"
 		},
 		{
-			"item": "fusion:tungsten_carbide_nugget"
+			"item": "simpletungsten:tungsten_carbide_nugget"
 		},
 		{
-			"item": "fusion:medium_tungsten_carbide_chunk"
+			"item": "simpletungsten:medium_tungsten_carbide_chunk"
 		}
 	],
 	"result": {
-		"item": "fusion:large_tungsten_carbide_chunk"
+		"item": "simpletungsten:large_tungsten_carbide_chunk"
 	}
 }
