@@ -5,18 +5,19 @@
             "type": "simpletungsten:flag"
         }
     ],
-    "key": {
-        "#": {
-            "item": "simpletungsten:prasinos_nugget"
-        }
-    },
-    "pattern": [
-        "###",
-        "# #",
-        "###"
-    ],
+	"ingredients": [
+		{
+			"item": "fusion:medium_prasinos_chunk"
+		},
+		{
+			"item": "fusion:medium_prasinos_chunk"
+		},
+		{
+			"item" : "fusion:prasinos_nugget"
+		}		
+	],
     "result": {
         "item": "simpletungsten:large_prasinos_chunk"
     },
-    "type": "minecraft:crafting_shaped"
+    "type": "minecraft:crafting_shapeless"
 }

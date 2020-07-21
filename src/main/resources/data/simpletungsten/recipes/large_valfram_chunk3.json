@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "fusion:valfram_nugget"
+		},
+		{
+			"item": "fusion:valfram_nugget"
+		},
+		{
+			"item": "fusion:valfram_nugget"
+		},
+		{
+			"item": "fusion:valfram_nugget"
+		},
+		{
+			"item": "fusion:valfram_nugget"
+		},
+		{
+			"item": "fusion:medium_valfram_chunk"
+		}
+	],
+	"result": {
+		"item": "fusion:large_valfram_chunk"
+	}
+}

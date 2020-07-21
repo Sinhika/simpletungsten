@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "fusion:prasinos_nugget"
+		},
+		{
+			"item": "fusion:prasinos_nugget"
+		},
+		{
+			"item": "fusion:prasinos_nugget"
+		},
+		{
+			"item": "fusion:prasinos_nugget"
+		},
+		{
+			"item": "fusion:prasinos_nugget"
+		},
+		{
+			"item": "fusion:medium_prasinos_chunk"
+		}
+	],
+	"result": {
+		"item": "fusion:large_prasinos_chunk"
+	}
+}

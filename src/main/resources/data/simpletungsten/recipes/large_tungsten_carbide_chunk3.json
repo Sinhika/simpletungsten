@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "fusion:tungsten_carbide_nugget"
+		},
+		{
+			"item": "fusion:tungsten_carbide_nugget"
+		},
+		{
+			"item": "fusion:tungsten_carbide_nugget"
+		},
+		{
+			"item": "fusion:tungsten_carbide_nugget"
+		},
+		{
+			"item": "fusion:tungsten_carbide_nugget"
+		},
+		{
+			"item": "fusion:medium_tungsten_carbide_chunk"
+		}
+	],
+	"result": {
+		"item": "fusion:large_tungsten_carbide_chunk"
+	}
+}
