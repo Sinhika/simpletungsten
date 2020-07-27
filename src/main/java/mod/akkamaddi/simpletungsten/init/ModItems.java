@@ -112,19 +112,19 @@ public final class ModItems
     
     // hoes
     public static final RegistryObject<HoeItem> tungsten_hoe = ITEMS.register("tungsten_hoe",
-            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN, -1.0F,
+            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN, -1, -1.0F,
                                 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> tungsten_carbide_hoe = ITEMS.register("tungsten_carbide_hoe",
-            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN_CARBIDE, -1.0F,
+            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN_CARBIDE, -1,  -1.0F,
                                 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> valfram_hoe = ITEMS.register("valfram_hoe",
-            () -> new HoeItem(SimpleTungstenItemTier.VALFRAM, -1.0F,
+            () -> new HoeItem(SimpleTungstenItemTier.VALFRAM, -1, -1.0F,
                                 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> tungsten_steel_hoe = ITEMS.register("tungsten_steel_hoe",
-            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN_STEEL, -1.0F,
+            () -> new HoeItem(SimpleTungstenItemTier.TUNGSTEN_STEEL, -1, -1.0F,
                                 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<HoeItem> prasinos_hoe = ITEMS.register("prasinos_hoe",
-            () -> new HoeItem(SimpleTungstenItemTier.PRASINOS, -1.0F,
+            () -> new HoeItem(SimpleTungstenItemTier.PRASINOS, -1, -1.0F,
                                 new Item.Properties().group(ModTabGroups.MOD_ITEM_GROUP)));
   
     // shovel

@@ -95,4 +95,11 @@ public enum SimpleTungstenArmorMaterial implements IArmorMaterial
         return this.toughness;
     }
 
+    @Override
+    public float getKnockbackResistance()
+    {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
 } // end enum
