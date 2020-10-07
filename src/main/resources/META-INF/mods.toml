@@ -3,8 +3,9 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[32,)" #mandatory
+loaderVersion="[34,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/simpletungsten/issues"
+license="LGPL 3"
 
 [[mods]]
 modId="simpletungsten"
@@ -21,27 +22,34 @@ made with tungsten, and two tungsten alloys.
 [[dependencies.simpletungsten]]
     modId="forge"
     mandatory=true
-    versionRange="[32.0.55,)"
+    versionRange="34.1.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpletungsten]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.1,]"
+    versionRange="[1.16.3,]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simpletungsten]]
-    modId="simpleores"
+    modId="simplecorelib"
     mandatory=true
-    versionRange="[1.16.1,]"
+    versionRange="[1.16.3-2.0.0.6,]"
+    ordering="NONE"
+    side="BOTH"    
+
+[[dependencies.simpletungsten]]
+    modId="simpleores"
+    mandatory=false
+    versionRange="[1.16.3,]"
     ordering="BEFORE"
     side="BOTH"    
 
 [[dependencies.simpletungsten]]
     modId="fusion"
     mandatory=true
-    versionRange="[1.16.1,]"
+    versionRange="[1.16.3,]"
     ordering="BEFORE"
     side="BOTH"    
