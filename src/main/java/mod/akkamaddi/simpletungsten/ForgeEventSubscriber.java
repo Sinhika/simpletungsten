@@ -4,9 +4,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simpletungsten.content.SimpleTungstenArmorMaterial;
+import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,8 +17,18 @@ import net.minecraftforge.fml.common.Mod;
 public final class ForgeEventSubscriber
 {
     private static final Logger LOGGER = LogManager.getLogger(SimpleTungsten.MODID + " Forge Event Subscriber");
-    
+ 
     /**
+     * Biome loading triggers ore generation.
+     */
+    @SubscribeEvent(priority=EventPriority.HIGH)
+    public static void onBiomeLoading(BiomeLoadingEvent evt)
+    {
+        if (!OreGeneration.checkAndInitBiome(evt)) return;
+        OreGeneration.generateOverworldOres(evt);
+   } // end onBiomeLoading()
+    
+     /**
      * Handle special armor immunities: tungsten carbide armor protects from impact damage such
      * as falling anvils, falling blocks, being smashed into a wall; valfram protects from heat
      * and fire damage.

@@ -1,7 +1,8 @@
 package mod.akkamaddi.simpletungsten.config;
 
-import net.minecraft.world.gen.placement.CountRangeConfig;
+import net.minecraft.world.gen.placement.TopSolidRangeConfig;
 import net.minecraftforge.fml.config.ModConfig;
+import mod.alexndr.simplecorelib.config.ModOreConfig;
 
 /**
  * This bakes the config values to normal fields
@@ -16,9 +17,12 @@ public final class ConfigHelper
     public static void bakeServer(final ModConfig config)
     {
         SimpleTungstenConfig.enableTungstenOre = ConfigHolder.SERVER.serverEnableTungstenOre.get();
-        SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
-        SimpleTungstenConfig.tungsten_cfg = new CountRangeConfig(ConfigHolder.SERVER.serverTungstenVeinCount.get(),
-                ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 0, ConfigHolder.SERVER.serverTungstenMaxHeight.get());
+        //SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
+        SimpleTungstenConfig.tungsten_cfg = new ModOreConfig(
+                new TopSolidRangeConfig( ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 
+                        0, ConfigHolder.SERVER.serverTungstenMaxHeight.get()),
+                ConfigHolder.SERVER.serverTungstenVeinSize.get(),
+                ConfigHolder.SERVER.serverTungstenVeinCount.get());
 
         // recipe flags
         SimpleTungstenConfig.INSTANCE.putFlag("tungsten_recipes", ConfigHolder.SERVER.serverEnableTungstenRecipes.get());

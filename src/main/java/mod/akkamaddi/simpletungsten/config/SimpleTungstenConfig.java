@@ -3,8 +3,8 @@ package mod.akkamaddi.simpletungsten.config;
 import java.util.HashMap;
 import java.util.Map;
 
-import mod.alexndr.simpleores.api.config.ISimpleConfig;
-import net.minecraft.world.gen.placement.CountRangeConfig;
+import mod.alexndr.simplecorelib.config.ISimpleConfig;
+import mod.alexndr.simplecorelib.config.ModOreConfig;
 
 public class SimpleTungstenConfig implements ISimpleConfig
 {
@@ -14,8 +14,8 @@ public class SimpleTungstenConfig implements ISimpleConfig
     public static boolean enableTungstenOre;
     
     // Vein/Chunk Count, MinHeight, MaxHeightBase, MaxHeight
-    public static  CountRangeConfig tungsten_cfg;
-    public static  int tungsten_veinsize = 5;
+    public static  ModOreConfig tungsten_cfg;
+    //public static  int tungsten_veinsize = 5;
     
     @Override
     public boolean getFlag(String n)

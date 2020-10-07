@@ -8,10 +8,9 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.simpletungsten.config.ConfigHelper;
 import mod.akkamaddi.simpletungsten.config.ConfigHolder;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
-import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModTabGroups;
-import mod.alexndr.simpleores.api.config.FlagCondition;
+import mod.alexndr.simplecorelib.config.FlagCondition;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipeSerializer;
@@ -19,14 +18,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
-@SuppressWarnings("deprecation")
 @Mod.EventBusSubscriber(modid = SimpleTungsten.MODID,  bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber
 {
@@ -39,9 +36,6 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        DeferredWorkQueue.runLater( () -> {
-                OreGeneration.setupOreGen();
-        } );
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
