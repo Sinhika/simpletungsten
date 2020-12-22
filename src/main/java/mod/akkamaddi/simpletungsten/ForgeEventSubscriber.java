@@ -7,6 +7,7 @@ import mod.akkamaddi.simpletungsten.content.SimpleTungstenArmorMaterial;
 import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -24,8 +25,10 @@ public final class ForgeEventSubscriber
     @SubscribeEvent(priority=EventPriority.HIGH)
     public static void onBiomeLoading(BiomeLoadingEvent evt)
     {
-        if (!OreGeneration.checkAndInitBiome(evt)) return;
-        OreGeneration.generateOverworldOres(evt);
+        if (evt.getCategory() != Biome.Category.NETHER && evt.getCategory() != Biome.Category.THEEND)
+        {
+            OreGeneration.generateOverworldOres(evt);
+        }
    } // end onBiomeLoading()
     
      /**

@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.simpletungsten.config.ConfigHelper;
 import mod.akkamaddi.simpletungsten.config.ConfigHolder;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
+import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModTabGroups;
 import mod.alexndr.simplecorelib.config.FlagCondition;
@@ -36,6 +37,9 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            OreGeneration.initOverworldFeatures();
+      });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
