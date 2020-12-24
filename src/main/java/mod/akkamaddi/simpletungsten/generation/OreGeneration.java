@@ -1,5 +1,6 @@
 package mod.akkamaddi.simpletungsten.generation;
 
+import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.alexndr.simplecorelib.world.OreGenUtils;
@@ -24,6 +25,8 @@ public class OreGeneration
     {
         ORE_TUNGSTEN = OreGenUtils.buildOverworldOreFeature(Feature.ORE, ModBlocks.tungsten_ore.get().getDefaultState(),
                 SimpleTungstenConfig.tungsten_cfg);
+        OreGenUtils.registerFeature(SimpleTungsten.MODID, "tungsten_vein", ORE_TUNGSTEN);
+
     }
     
     /**
