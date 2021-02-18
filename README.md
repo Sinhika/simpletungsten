@@ -1,4 +1,4 @@
-# akkamaddi's Simple Tungsten & Tungsten alloys
+Dr4g0n2012# akkamaddi's Simple Tungsten & Tungsten alloys
 
 Source code for the Minecraft Forge mod "Simple Tungsten", originally by akkamaddi, ported and maintained by Sinhika
 
@@ -6,17 +6,12 @@ Binary and documentation hosted on CurseForge at TBD.
 
 TODO List
 ---------
-- <s>add forge tags</s>  
-- <s>set up config files and values</s>  
-- <s>change names of conditions in recipes to match config.</s>  
-- <s>define armor and tool materials</s>  
-- <s>armor set effect handlers</s>  
-- <s>initialize blocks</s>  
-- <s>initialize items</s>  
-	* <s>initialize simple items</s>  
-   	* <s>initialize tools</s>  
-   	* <s>initialize armors</s>  
-- <s>do ore generation</s>  
+- Add dust & ore chunk textures.
+- Add dust & ore chunk items.
+- Add shears for all metals.
+- Add Silent Mechanisms support.
+- Add Silent Gear support.
+- Make a better CurseForge logo.
 
 License
 -------
