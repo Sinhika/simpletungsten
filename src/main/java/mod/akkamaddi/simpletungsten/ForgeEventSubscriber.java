@@ -59,7 +59,7 @@ public final class ForgeEventSubscriber
                 if (event.isCancelable()) event.setCanceled(true);
                 LOGGER.debug("Canceled impact damage because of tungsten carbide");
             } // end-if full set of tungsten carbide and impact damage
-            else if ( event.getSource().isFireDamage()
+            else if ( event.getSource().isFire()
                      && ModUtil.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.VALFRAM))
             {
                 // pro-forma cancelable check.

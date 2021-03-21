@@ -9,11 +9,11 @@ import net.minecraft.util.LazyValue;
 
 public enum SimpleTungstenItemTier implements IItemTier 
 {
-    TUNGSTEN(2, 1320, 4.5F, 2.0F, 6, ()->{ return Ingredient.fromItems( ModItems.tungsten_ingot.get()); }),
-    TUNGSTEN_CARBIDE(2, 1360, 15.0F, 3.0F, 12, ()->{ return Ingredient.fromItems( ModItems.tungsten_carbide_ingot.get()); }),
-    VALFRAM(3, 1420, 17.0F, 3.0F, 20, ()->{ return Ingredient.fromItems( ModItems.valfram_ingot.get()); }),
-    TUNGSTEN_STEEL(2, 1680, 10.0F, 3.0F, 7, ()->{ return Ingredient.fromItems( ModItems.tungsten_steel_ingot.get()); }),
-    PRASINOS(4, 2640, 13.0F, 5.0F, 9, ()->{ return Ingredient.fromItems( ModItems.prasinos_ingot.get()); });
+    TUNGSTEN(2, 1320, 4.5F, 2.0F, 6, ()->{ return Ingredient.of( ModItems.tungsten_ingot.get()); }),
+    TUNGSTEN_CARBIDE(2, 1360, 15.0F, 3.0F, 12, ()->{ return Ingredient.of( ModItems.tungsten_carbide_ingot.get()); }),
+    VALFRAM(3, 1420, 17.0F, 3.0F, 20, ()->{ return Ingredient.of( ModItems.valfram_ingot.get()); }),
+    TUNGSTEN_STEEL(2, 1680, 10.0F, 3.0F, 7, ()->{ return Ingredient.of( ModItems.tungsten_steel_ingot.get()); }),
+    PRASINOS(4, 2640, 13.0F, 5.0F, 9, ()->{ return Ingredient.of( ModItems.prasinos_ingot.get()); });
     
     private final int harvestLevel;
     private final int maxUses;
@@ -34,33 +34,33 @@ public enum SimpleTungstenItemTier implements IItemTier
     }
 
     @Override
-    public int getMaxUses() {
+    public int getUses() {
        return this.maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
        return this.efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
        return this.attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
        return this.harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
        return this.enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
-       return this.repairMaterial.getValue();
+    public Ingredient getRepairIngredient() {
+       return this.repairMaterial.get();
     }
 
 } // end-enum

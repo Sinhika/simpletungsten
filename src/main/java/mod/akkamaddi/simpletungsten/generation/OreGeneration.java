@@ -23,7 +23,7 @@ public class OreGeneration
      */
     public static void initOverworldFeatures()
     {
-        ORE_TUNGSTEN = OreGenUtils.buildOverworldOreFeature(Feature.ORE, ModBlocks.tungsten_ore.get().getDefaultState(),
+        ORE_TUNGSTEN = OreGenUtils.buildOverworldOreFeature(Feature.ORE, ModBlocks.tungsten_ore.get().defaultBlockState(),
                 SimpleTungstenConfig.tungsten_cfg);
         OreGenUtils.registerFeature(SimpleTungsten.MODID, "tungsten_vein", ORE_TUNGSTEN);
 
@@ -34,7 +34,7 @@ public class OreGeneration
      */
     public static void generateOverworldOres(BiomeLoadingEvent evt)
     {
-        evt.getGeneration().withFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TUNGSTEN);
+        evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TUNGSTEN);
     } // end generateOverworldOres()
 
 } // end class OreGeneration

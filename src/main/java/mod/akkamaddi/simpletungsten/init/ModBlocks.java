@@ -28,39 +28,39 @@ public final class ModBlocks
     
     // Ore Block
     public static final RegistryObject<OreBlock> tungsten_ore = BLOCKS.register("tungsten_ore",
-            () -> new OreBlock(Block.Properties.create(Material.ROCK)
-                    .hardnessAndResistance( 4.0F, 10.0F).setRequiresTool()
+            () -> new OreBlock(Block.Properties.of(Material.STONE)
+                    .strength( 4.0F, 10.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(2)));
 
     // Storage Blocks
     public static final RegistryObject<Block> tungsten_block = BLOCKS.register("tungsten_block", 
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.GRAY_TERRACOTTA)
-                    .hardnessAndResistance(10.0F, 22.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_GRAY)
+                    .strength(10.0F, 22.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
     public static final RegistryObject<Block> tungsten_carbide_block = BLOCKS.register("tungsten_carbide_block", 
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.GRAY_TERRACOTTA)
-                    .hardnessAndResistance(10.0F, 22.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_GRAY)
+                    .strength(10.0F, 22.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
     public static final RegistryObject<Block> valfram_block = BLOCKS.register("valfram_block", 
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.RED_TERRACOTTA)
-                    .hardnessAndResistance(10.0F, 22.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_RED)
+                    .strength(10.0F, 22.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
     public static final RegistryObject<Block> tungsten_steel_block = BLOCKS.register("tungsten_steel_block", 
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.LIGHT_BLUE_TERRACOTTA)
-                    .hardnessAndResistance(15.0F, 25.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(15.0F, 25.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
     public static final RegistryObject<Block> prasinos_block = BLOCKS.register("prasinos_block", 
-            () -> new Block(Block.Properties.create(Material.IRON,
-                    MaterialColor.GREEN_TERRACOTTA)
-                    .hardnessAndResistance(18.0F, 32.0F).setRequiresTool()
+            () -> new Block(Block.Properties.of(Material.METAL,
+                    MaterialColor.TERRACOTTA_GREEN)
+                    .strength(18.0F, 32.0F).requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE).harvestLevel(0)));
     
 } // end-class
