@@ -2,6 +2,7 @@ package mod.akkamaddi.simpletungsten.loot;
 
 import mod.alexndr.simplecorelib.helpers.InjectionTableLookup;
 
+@SuppressWarnings("serial")
 public class SimpleTungstenInjectionLookup extends InjectionTableLookup
 {
 
