@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "name": "main",
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "simpletungsten:tungsten_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "simpletungsten:tungsten_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "simpletungsten:tungsten_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "simpletungsten:tungsten_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpletungsten:tungsten_carbide_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpletungsten:tungsten_carbide_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpletungsten:tungsten_carbide_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simpletungsten:tungsten_carbide_boots"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.25
+        }
+      ]
+    }
+  ]
+}

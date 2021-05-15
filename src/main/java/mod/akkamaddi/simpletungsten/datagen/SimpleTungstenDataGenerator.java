@@ -27,6 +27,7 @@ public class SimpleTungstenDataGenerator
         if (event.includeServer())
         {
             gen.addProvider(new SimpleTungstenLootTableProvider(gen));
+            gen.addProvider(new SimpleTungstenLootInjectorProvider(gen));
         }
     } // end gatherData()
 } // end class
