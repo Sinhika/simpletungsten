@@ -5,13 +5,16 @@ build/
 gradle/
 run/
 libs/
+src/generated/resources/.cache/
 .settings/
 *.log
 *.jar
 *.class
 *.launch
+*~
 gradlew
 gradlew.bat
 build.number
 bin/
 .gradle/
+.idea/
