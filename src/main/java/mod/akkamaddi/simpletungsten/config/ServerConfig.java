@@ -25,10 +25,15 @@ final class ServerConfig
     final ForgeConfigSpec.BooleanValue serverEnablePrasinosRecipes;
     
     final ForgeConfigSpec.BooleanValue serverEnableRecyclingRecipes;
+    final ForgeConfigSpec.BooleanValue serverAddModLootToChests;
 
 	ServerConfig(final ForgeConfigSpec.Builder builder)
 	{
 	    builder.push("General");
+        serverAddModLootToChests = builder.comment("Add SimpleTungsten items to chest loot?")
+                .translation(SimpleTungsten.MODID + ".config.addModLootToChests")
+                .define("AddModLootToChests", true);
+        
 	    serverEnableRecyclingRecipes = builder
             .comment("Enable fusion recydling of tungsten items?")
             .translation(SimpleTungsten.MODID + ".config.enableRecycling")
