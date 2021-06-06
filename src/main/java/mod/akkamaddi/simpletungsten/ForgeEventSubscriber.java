@@ -7,6 +7,7 @@ import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.content.SimpleTungstenArmorMaterial;
 import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import mod.akkamaddi.simpletungsten.loot.SimpleTungstenInjectionLookup;
+import mod.alexndr.simplecorelib.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.helpers.LootUtils;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
@@ -71,14 +72,14 @@ public final class ForgeEventSubscriber
                  || event.getSource() == DamageSource.FLY_INTO_WALL
                  || event.getSource() == DamageSource.IN_WALL) 
                 &&
-                ModUtil.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE))
+                ArmorUtils.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE))
             {
                 // pro-forma cancelable check.
                 if (event.isCancelable()) event.setCanceled(true);
                 LOGGER.debug("Canceled impact damage because of tungsten carbide");
             } // end-if full set of tungsten carbide and impact damage
             else if ( event.getSource().isFire()
-                     && ModUtil.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.VALFRAM))
+                     && ArmorUtils.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.VALFRAM))
             {
                 // pro-forma cancelable check.
                 if (event.isCancelable()) event.setCanceled(true);
