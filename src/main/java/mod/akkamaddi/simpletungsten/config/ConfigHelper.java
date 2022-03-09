@@ -1,6 +1,6 @@
 package mod.akkamaddi.simpletungsten.config;
 
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
+import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
 import net.minecraftforge.fml.config.ModConfig;
 import mod.alexndr.simplecorelib.config.ModOreConfig;
 
@@ -21,7 +21,7 @@ public final class ConfigHelper
         
         //SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
         SimpleTungstenConfig.tungsten_cfg = new ModOreConfig(
-                new TopSolidRangeConfig( ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 
+                new RangeDecoratorConfiguration( ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 
                         0, ConfigHolder.SERVER.serverTungstenMaxHeight.get()),
                 ConfigHolder.SERVER.serverTungstenVeinSize.get(),
                 ConfigHolder.SERVER.serverTungstenVeinCount.get());

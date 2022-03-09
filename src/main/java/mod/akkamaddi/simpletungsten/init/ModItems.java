@@ -5,14 +5,14 @@ import mod.akkamaddi.simpletungsten.content.SimpleTungstenArmorMaterial;
 import mod.akkamaddi.simpletungsten.content.SimpleTungstenItemTier;
 import mod.akkamaddi.simpletungsten.content.TungstenCarbideArmorItem;
 import mod.akkamaddi.simpletungsten.content.ValframArmorItem;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -147,72 +147,72 @@ public final class ModItems
     // ARMOR
     // tungsten
     public static final RegistryObject<ArmorItem> tungsten_helmet = ITEMS.register("tungsten_helmet",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_leggings = ITEMS.register("tungsten_leggings",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_chestplate = ITEMS.register("tungsten_chestplate",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_boots = ITEMS.register("tungsten_boots",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // tungsten carbide
     public static final RegistryObject<TungstenCarbideArmorItem> tungsten_carbide_helmet = ITEMS.register("tungsten_carbide_helmet",
-            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlotType.HEAD,
+            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<TungstenCarbideArmorItem> tungsten_carbide_leggings = ITEMS.register("tungsten_carbide_leggings",
-            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlotType.LEGS,
+            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<TungstenCarbideArmorItem> tungsten_carbide_chestplate = ITEMS.register("tungsten_carbide_chestplate",
-            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlotType.CHEST,
+            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<TungstenCarbideArmorItem> tungsten_carbide_boots = ITEMS.register("tungsten_carbide_boots",
-            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlotType.FEET,
+            () -> new TungstenCarbideArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // valfram
     public static final RegistryObject<ValframArmorItem> valfram_helmet = ITEMS.register("valfram_helmet",
-            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlotType.HEAD,
+            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ValframArmorItem> valfram_leggings = ITEMS.register("valfram_leggings",
-            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlotType.LEGS,
+            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ValframArmorItem> valfram_chestplate = ITEMS.register("valfram_chestplate",
-            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlotType.CHEST,
+            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ValframArmorItem> valfram_boots = ITEMS.register("valfram_boots",
-            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlotType.FEET,
+            () -> new ValframArmorItem(SimpleTungstenArmorMaterial.VALFRAM, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // tungsten steel
     public static final RegistryObject<ArmorItem> tungsten_steel_helmet = ITEMS.register("tungsten_steel_helmet",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_steel_leggings = ITEMS.register("tungsten_steel_leggings",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_steel_chestplate = ITEMS.register("tungsten_steel_chestplate",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> tungsten_steel_boots = ITEMS.register("tungsten_steel_boots",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.TUNGSTEN_STEEL, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
    // prasinos
     public static final RegistryObject<ArmorItem> prasinos_helmet = ITEMS.register("prasinos_helmet",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> prasinos_leggings = ITEMS.register("prasinos_leggings",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> prasinos_chestplate = ITEMS.register("prasinos_chestplate",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> prasinos_boots = ITEMS.register("prasinos_boots",
-            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleTungstenArmorMaterial.PRASINOS, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     

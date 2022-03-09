@@ -4,9 +4,9 @@ import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.alexndr.simplecorelib.world.OreGenUtils;
-import net.minecraft.world.gen.GenerationStage.Decoration;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 /**

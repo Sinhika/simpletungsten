@@ -3,11 +3,11 @@ package mod.akkamaddi.simpletungsten.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.simpletungsten.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
 
-public enum SimpleTungstenItemTier implements IItemTier 
+public enum SimpleTungstenItemTier implements Tier 
 {
     TUNGSTEN(2, 1320, 4.5F, 2.0F, 6, ()->{ return Ingredient.of( ModItems.tungsten_ingot.get()); }),
     TUNGSTEN_CARBIDE(2, 1360, 15.0F, 3.0F, 12, ()->{ return Ingredient.of( ModItems.tungsten_carbide_ingot.get()); }),
@@ -20,7 +20,7 @@ public enum SimpleTungstenItemTier implements IItemTier
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
 
     private SimpleTungstenItemTier(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn,
                      Supplier<Ingredient> repairMaterialIn)
@@ -30,7 +30,7 @@ public enum SimpleTungstenItemTier implements IItemTier
        this.efficiency = efficiencyIn;
        this.attackDamage = attackDamageIn;
        this.enchantability = enchantabilityIn;
-       this.repairMaterial = new LazyValue<>(repairMaterialIn);
+       this.repairMaterial = new LazyLoadedValue<>(repairMaterialIn);
     }
 
     @Override
