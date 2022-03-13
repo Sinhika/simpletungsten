@@ -57,7 +57,7 @@ final class ServerConfig
         serverTungstenBottomHeight = builder
                 .comment("Tungsten ore minimum height")
                 .translation(SimpleTungsten.MODID + ".config.serverTungstenBottomHeight")
-                .defineInRange("TungstenBottomHeight", 1, 1, 254);
+                .defineInRange("TungstenBottomHeight", -58, -63, 254);
         serverTungstenMaxHeight = builder
                 .comment("Tungsten ore maximum height")
                 .translation(SimpleTungsten.MODID + ".config.serverTungstenMaxHeight")

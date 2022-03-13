@@ -2,11 +2,11 @@ package mod.akkamaddi.simpletungsten.datagen;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
-import mod.akkamaddi.simpletungsten.SimpleTungsten;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 /**
  * bundles up the GatherDataEvent handler and all the necessary data providers for
@@ -26,6 +26,10 @@ public class SimpleTungstenDataGenerator
         DataGenerator gen = event.getGenerator();
         if (event.includeServer())
         {
+            gen.addProvider(new Recipes(gen));
+            gen.addProvider(new FusionRecipes(gen));
+            gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
+            gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
             gen.addProvider(new SimpleTungstenLootTableProvider(gen));
             gen.addProvider(new SimpleTungstenLootInjectorProvider(gen));
         }

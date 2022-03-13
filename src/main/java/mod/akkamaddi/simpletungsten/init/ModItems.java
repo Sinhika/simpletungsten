@@ -13,9 +13,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public final class ModItems
 {
@@ -24,6 +24,8 @@ public final class ModItems
     
     // Simple Items: ingots, chunks, nuggets
     public static final RegistryObject<Item> tungsten_ingot = ITEMS.register("tungsten_ingot",
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> raw_tungsten = ITEMS.register("raw_tungsten",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> tungsten_nugget = ITEMS.register("tungsten_nugget",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));

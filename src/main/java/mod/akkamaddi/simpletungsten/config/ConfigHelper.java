@@ -1,8 +1,8 @@
 package mod.akkamaddi.simpletungsten.config;
 
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraftforge.fml.config.ModConfig;
 import mod.alexndr.simplecorelib.config.ModOreConfig;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraftforge.fml.config.ModConfig;
 
 /**
  * This bakes the config values to normal fields
@@ -20,11 +20,10 @@ public final class ConfigHelper
         SimpleTungstenConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
         //SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
-        SimpleTungstenConfig.tungsten_cfg = new ModOreConfig(
-                new RangeDecoratorConfiguration( ConfigHolder.SERVER.serverTungstenBottomHeight.get(), 
-                        0, ConfigHolder.SERVER.serverTungstenMaxHeight.get()),
-                ConfigHolder.SERVER.serverTungstenVeinSize.get(),
-                ConfigHolder.SERVER.serverTungstenVeinCount.get());
+        SimpleTungstenConfig.tungsten_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverTungstenVeinSize.get(),
+                ConfigHolder.SERVER.serverTungstenVeinCount.get(), true,
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverTungstenBottomHeight.get()), 
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverTungstenMaxHeight.get()));
 
         // recipe flags
         SimpleTungstenConfig.INSTANCE.putFlag("tungsten_recipes", ConfigHolder.SERVER.serverEnableTungstenRecipes.get());
