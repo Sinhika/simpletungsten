@@ -7,6 +7,7 @@ import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.alexndr.simplecorelib.datagen.MiningBlockTags;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,6 +26,7 @@ public class ModBlockTags extends MiningBlockTags
     {
         super.addTags();
         registerStorageBlockTags();
+        registerBeaconBlockTags();
     }
 
     @Override
@@ -93,5 +95,18 @@ public class ModBlockTags extends MiningBlockTags
             .add(ModBlocks.prasinos_block.get());
         
     } // end registerStorageBlockTags()
+    
+    /**
+     * Identify metal blocks as beacon block bases.
+     */
+    private void registerBeaconBlockTags()
+    {
+        // NB: valfram and tungsten carbide are ceramics, and thus not beacon bases.
+        this.tag(BlockTags.BEACON_BASE_BLOCKS)
+            .add(ModBlocks.tungsten_block.get())
+            .add(ModBlocks.tungsten_steel_block.get())
+            .add(ModBlocks.prasinos_block.get());
+        
+    }
     
 } // end class
