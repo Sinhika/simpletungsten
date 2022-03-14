@@ -1,0 +1,39 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "flag": "valfram_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "simpletungsten:valfram_sword"
+          ]
+        },
+        "criteria": {
+          "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "simpletungsten:valfram_ingot"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_item"
+          ]
+        ]
+      }
+    }
+  ]
+}

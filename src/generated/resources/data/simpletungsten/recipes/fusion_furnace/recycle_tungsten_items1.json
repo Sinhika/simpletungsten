@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "simpletungsten:tungsten_axe"
+            },
+            {
+              "item": "simpletungsten:tungsten_pickaxe"
+            },
+            {
+              "item": "simpletungsten:tungsten_boots"
+            },
+            {
+              "item": "simpletungsten:tungsten_helmet"
+            },
+            {
+              "item": "simpletungsten:tungsten_shovel"
+            },
+            {
+              "item": "simpletungsten:tungsten_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "simpletungsten:raw_tungsten"
+        },
+        "cookingtime": 600,
+        "experience": 10.0
+      }
+    }
+  ]
+}

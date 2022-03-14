@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:large_valfram_chunk"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:medium_valfram_chunk",
+    "count": 2
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "simpletungsten:valfram_axe"
+    },
+    {
+      "item": "simpletungsten:valfram_boots"
+    },
+    {
+      "item": "simpletungsten:valfram_chestplate"
+    },
+    {
+      "item": "simpletungsten:valfram_helmet"
+    },
+    {
+      "item": "simpletungsten:valfram_hoe"
+    },
+    {
+      "item": "simpletungsten:valfram_leggings"
+    },
+    {
+      "item": "simpletungsten:valfram_pickaxe"
+    },
+    {
+      "item": "simpletungsten:valfram_shovel"
+    },
+    {
+      "item": "simpletungsten:valfram_sword"
+    }
+  ],
+  "result": "simpletungsten:valfram_nugget",
+  "experience": 0.2,
+  "cookingtime": 100
+}

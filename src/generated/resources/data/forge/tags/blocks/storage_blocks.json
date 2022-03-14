@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_block/tungsten",
+    "#forge:storage_block/raw_tungsten",
+    "#forge:storage_block/tungsten_carbide",
+    "#forge:storage_block/tungsten_steel",
+    "#forge:storage_block/valfram",
+    "#forge:storage_block/prasinos"
+  ]
+}

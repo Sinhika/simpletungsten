@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:medium_prasinos_chunk"
+    },
+    {
+      "item": "simpletungsten:medium_prasinos_chunk"
+    },
+    {
+      "item": "simpletungsten:prasinos_nugget"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:large_prasinos_chunk"
+  }
+}

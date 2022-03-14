@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simpletungsten:tungsten_steel_nugget"
+    }
+  },
+  "result": {
+    "item": "simpletungsten:tungsten_steel_ingot"
+  }
+}

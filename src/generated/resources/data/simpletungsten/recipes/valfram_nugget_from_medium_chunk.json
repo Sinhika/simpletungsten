@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:medium_valfram_chunk"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:valfram_nugget",
+    "count": 4
+  }
+}

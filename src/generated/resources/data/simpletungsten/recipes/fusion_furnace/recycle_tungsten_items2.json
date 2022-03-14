@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "simpletungsten:tungsten_chestplate"
+            },
+            {
+              "item": "simpletungsten:tungsten_leggings"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "simpletungsten:raw_tungsten",
+          "count": 2
+        },
+        "cookingtime": 600,
+        "experience": 20.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "simpletungsten:large_prasinos_chunk"
+  },
+  "result": "simpletungsten:prasinos_ingot",
+  "experience": 1.6,
+  "cookingtime": 200
+}

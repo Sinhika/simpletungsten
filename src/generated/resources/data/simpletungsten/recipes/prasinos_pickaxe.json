@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "prasinos_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SSS",
+          " T ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "item": "simpletungsten:prasinos_ingot"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "simpletungsten:prasinos_pickaxe"
+        }
+      }
+    }
+  ]
+}

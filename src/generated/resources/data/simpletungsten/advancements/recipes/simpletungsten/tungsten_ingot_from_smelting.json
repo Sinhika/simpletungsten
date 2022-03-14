@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpletungsten:tungsten_ingot_from_smelting"
+    ]
+  },
+  "criteria": {
+    "tungsten_ingot_from_smelting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpletungsten:raw_tungsten"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpletungsten:tungsten_ingot_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tungsten_ingot_from_smelting",
+      "has_the_recipe"
+    ]
+  ]
+}

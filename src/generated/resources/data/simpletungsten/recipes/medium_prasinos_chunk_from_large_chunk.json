@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:large_prasinos_chunk"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:medium_prasinos_chunk",
+    "count": 2
+  }
+}

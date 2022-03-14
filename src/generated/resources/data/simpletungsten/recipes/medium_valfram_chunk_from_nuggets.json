@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "simpletungsten:valfram_nugget"
+    }
+  },
+  "result": {
+    "item": "simpletungsten:medium_valfram_chunk"
+  }
+}

@@ -3,7 +3,12 @@
   "pools": [
     {
       "name": "main",
-      "rolls": 1.0,
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1.0,
+        "max": 1.0
+      },
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -12,10 +17,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 3.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:large_tungsten_carbide_chunk"
@@ -27,10 +33,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 3.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:tungsten_ingot"
@@ -40,7 +47,12 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 1.0
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:large_tungsten_steel_chunk"
@@ -52,10 +64,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 2.0,
-                "max": 4.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 4.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:tungsten_ingot"
@@ -67,10 +80,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 2.0,
-                "max": 4.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 4.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:large_prasinos_chunk"
@@ -81,10 +95,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 2.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 3.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:tungsten_carbide_ingot"
@@ -95,10 +110,11 @@
             {
               "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1.0,
-                "max": 3.0,
-                "type": "minecraft:uniform"
-              }
+                "max": 3.0
+              },
+              "add": false
             }
           ],
           "name": "simpletungsten:tungsten_steel_ingot"

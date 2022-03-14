@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpletungsten:tungsten_ingot_from_blasting_from_deepslate_ore"
+    ]
+  },
+  "criteria": {
+    "tungsten_ingot_from_blasting_from_deepslate_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpletungsten:tungsten_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpletungsten:tungsten_ingot_from_blasting_from_deepslate_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tungsten_ingot_from_blasting_from_deepslate_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

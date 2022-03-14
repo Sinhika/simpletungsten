@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:valfram_block"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:valfram_ingot",
+    "count": 9
+  }
+}

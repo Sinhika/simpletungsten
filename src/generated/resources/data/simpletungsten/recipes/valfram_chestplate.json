@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "valfram_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S S",
+          "SSS",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpletungsten:valfram_ingot"
+          }
+        },
+        "result": {
+          "item": "simpletungsten:valfram_chestplate"
+        }
+      }
+    }
+  ]
+}

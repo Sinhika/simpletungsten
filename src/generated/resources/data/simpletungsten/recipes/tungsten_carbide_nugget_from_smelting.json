@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simpletungsten:tungsten_carbide_axe"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_boots"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_chestplate"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_helmet"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_hoe"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_leggings"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_pickaxe"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_shovel"
+    },
+    {
+      "item": "simpletungsten:tungsten_carbide_sword"
+    }
+  ],
+  "result": "simpletungsten:tungsten_carbide_nugget",
+  "experience": 0.2,
+  "cookingtime": 200
+}

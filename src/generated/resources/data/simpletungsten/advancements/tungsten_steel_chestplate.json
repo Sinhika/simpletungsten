@@ -1,0 +1,39 @@
+{
+  "advancements": [
+    {
+      "conditions": [
+        {
+          "flag": "tungsten_steel_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "rewards": {
+          "recipes": [
+            "simpletungsten:tungsten_steel_chestplate"
+          ]
+        },
+        "criteria": {
+          "has_item": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "simpletungsten:tungsten_steel_ingot"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "requirements": [
+          [
+            "has_item"
+          ]
+        ]
+      }
+    }
+  ]
+}

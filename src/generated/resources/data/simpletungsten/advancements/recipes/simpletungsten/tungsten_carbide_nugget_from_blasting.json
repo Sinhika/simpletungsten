@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simpletungsten:tungsten_carbide_nugget_from_blasting"
+    ]
+  },
+  "criteria": {
+    "tungsten_carbide_nugget_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simpletungsten:tungsten_carbide_axe"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simpletungsten:tungsten_carbide_nugget_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tungsten_carbide_nugget_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}

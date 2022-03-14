@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "prasinos_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S S",
+          "SSS",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simpletungsten:prasinos_ingot"
+          }
+        },
+        "result": {
+          "item": "simpletungsten:prasinos_chestplate"
+        }
+      }
+    }
+  ]
+}

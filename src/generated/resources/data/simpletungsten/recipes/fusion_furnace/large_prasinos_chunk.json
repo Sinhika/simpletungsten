@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "prasinos_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/tungsten"
+          },
+          {
+            "tag": "forge:ingots/adamantium"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:blaze_powder"
+        },
+        "output": {
+          "item": "simpletungsten:large_prasinos_chunk"
+        },
+        "cookingtime": 600,
+        "experience": 48.0
+      }
+    }
+  ]
+}

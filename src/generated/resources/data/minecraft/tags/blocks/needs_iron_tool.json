@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "simpletungsten:tungsten_ore",
+    "simpletungsten:deepslate_tungsten_ore",
+    "simpletungsten:tungsten_block",
+    "simpletungsten:raw_tungsten_block",
+    "simpletungsten:tungsten_carbide_block",
+    "simpletungsten:tungsten_steel_block"
+  ]
+}

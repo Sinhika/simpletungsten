@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simpletungsten:medium_tungsten_carbide_chunk"
+    }
+  ],
+  "result": {
+    "item": "simpletungsten:tungsten_carbide_nugget",
+    "count": 4
+  }
+}

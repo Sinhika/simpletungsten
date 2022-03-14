@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "tungsten_steel_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
+        "key": {
+          "S": {
+            "item": "simpletungsten:tungsten_steel_ingot"
+          }
+        },
+        "result": {
+          "item": "simpletungsten:tungsten_steel_leggings"
+        }
+      }
+    }
+  ]
+}

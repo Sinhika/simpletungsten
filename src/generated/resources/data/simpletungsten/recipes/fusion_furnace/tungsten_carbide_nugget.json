@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "tungsten_carbide_recipes",
+          "type": "simpletungsten:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/tungsten"
+          },
+          {
+            "item": "minecraft:brick"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:bone_meal"
+        },
+        "output": {
+          "item": "simpletungsten:tungsten_carbide_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 8.0
+      }
+    }
+  ]
+}

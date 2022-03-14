@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simpletungsten:prasinos_ingot"
+    }
+  },
+  "result": {
+    "item": "simpletungsten:prasinos_block"
+  }
+}
