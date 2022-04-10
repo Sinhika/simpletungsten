@@ -8,7 +8,7 @@ src/generated/resources/.cache/
 .settings/
 *.log
 *.jar
-! gradle/wrapper/*.jar
+!gradle/wrapper/*.jar
 *.class
 *.launch
 *~
