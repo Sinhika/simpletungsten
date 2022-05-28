@@ -6,7 +6,7 @@ import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.akkamaddi.simpletungsten.init.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -16,16 +16,16 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 public final class SimpleTungstenItemTier 
 {
-    public static final Tag.Named<Block> TUNGSTEN_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_tool"));
-    public static final Tag.Named<Block> TUNGSTEN_CARBIDE_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_carbide_tool"));
-    public static final Tag.Named<Block> VALFRAM_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleTungsten.MODID, "needs_valfram_tool"));
-    public static final Tag.Named<Block> TUNGSTEN_STEEL_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_steel_tool"));
-    public static final Tag.Named<Block> PRASINOS_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleTungsten.MODID, "needs_prasinos_tool"));
+    public static final TagKey<Block> TUNGSTEN_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_tool"));
+    public static final TagKey<Block> TUNGSTEN_CARBIDE_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_carbide_tool"));
+    public static final TagKey<Block> VALFRAM_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleTungsten.MODID, "needs_valfram_tool"));
+    public static final TagKey<Block> TUNGSTEN_STEEL_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleTungsten.MODID, "needs_tungsten_steel_tool"));
+    public static final TagKey<Block> PRASINOS_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleTungsten.MODID, "needs_prasinos_tool"));
    
     public static final Tier TUNGSTEN = TierSortingRegistry.registerTier( 
             new ForgeTier(Tiers.IRON.getLevel(), 1320, 4.5F, 2.0F, 6, TUNGSTEN_TAG, ()->Ingredient.of(ModItems.tungsten_ingot.get())),

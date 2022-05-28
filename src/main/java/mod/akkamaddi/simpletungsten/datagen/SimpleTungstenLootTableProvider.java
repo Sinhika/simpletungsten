@@ -9,7 +9,7 @@ import com.mojang.datafixers.util.Pair;
 
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModItems;
-import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
+import mod.alexndr.simplecorelib.api.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootTable.Builder;

@@ -1,7 +1,5 @@
 package mod.akkamaddi.simpletungsten.config;
 
-import mod.alexndr.simplecorelib.config.ModOreConfig;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.fml.config.ModConfig;
 
 /**
@@ -19,12 +17,7 @@ public final class ConfigHelper
         SimpleTungstenConfig.enableTungstenOre = ConfigHolder.SERVER.serverEnableTungstenOre.get();
         SimpleTungstenConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
-        //SimpleTungstenConfig.tungsten_veinsize = ConfigHolder.SERVER.serverTungstenVeinSize.get();
-        SimpleTungstenConfig.tungsten_cfg = new ModOreConfig(ModOreConfig.TRIANGLE, ConfigHolder.SERVER.serverTungstenVeinSize.get(),
-                ConfigHolder.SERVER.serverTungstenVeinCount.get(), true,
-                VerticalAnchor.absolute(ConfigHolder.SERVER.serverTungstenBottomHeight.get()), 
-                VerticalAnchor.absolute(ConfigHolder.SERVER.serverTungstenMaxHeight.get()));
-
+ 
         // recipe flags
         SimpleTungstenConfig.INSTANCE.putFlag("tungsten_recipes", ConfigHolder.SERVER.serverEnableTungstenRecipes.get());
         SimpleTungstenConfig.INSTANCE.putFlag("tungsten_carbide_recipes", ConfigHolder.SERVER.serverEnableTungstenCarbideRecipes.get());

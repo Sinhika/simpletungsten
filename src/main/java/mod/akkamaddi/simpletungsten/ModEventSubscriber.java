@@ -11,7 +11,7 @@ import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.generation.OreGeneration;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModTabGroups;
-import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,11 +38,7 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        event.enqueueWork(() -> {
-            OreGeneration.initOverworldFeatures();
-      });
-        LOGGER.debug("Common setup done");
-    } // end onCommonSetup
+     } // end onCommonSetup
 
     
     @SubscribeEvent
