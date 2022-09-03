@@ -12,12 +12,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
  */
 final class ServerConfig
 {
-    final ForgeConfigSpec.BooleanValue serverEnableTungstenOre;
-    final ForgeConfigSpec.IntValue serverTungstenVeinSize;
-    final ForgeConfigSpec.IntValue serverTungstenVeinCount;
-    final ForgeConfigSpec.IntValue serverTungstenBottomHeight;
-    final ForgeConfigSpec.IntValue serverTungstenMaxHeight;
-    
     final ForgeConfigSpec.BooleanValue serverEnableTungstenRecipes;
     final ForgeConfigSpec.BooleanValue serverEnableTungstenCarbideRecipes;
     final ForgeConfigSpec.BooleanValue serverEnableTungstenSteelRecipes;
@@ -40,30 +34,30 @@ final class ServerConfig
             .define("EnableRecycling", true);
 	    builder.pop();
 	    
-	    builder.push("OreGeneration");
-	    serverEnableTungstenOre = builder
-                .comment("Enable tungsten ore generation?")
-                .translation(SimpleTungsten.MODID + ".config.enableTungstenOre")
-                .define("EnableTungstenOre", true);
-        builder.push("Tungsten");
-        serverTungstenVeinSize = builder
-                .comment("Tungsten ore vein size")
-                .translation(SimpleTungsten.MODID + ".config.serverTungstenVeinSize")
-                .defineInRange("TungstenVeinSize", 5, 1, Integer.MAX_VALUE);
-        serverTungstenVeinCount = builder
-                .comment("Tungsten ore vein count per chunk")
-                .translation(SimpleTungsten.MODID + ".config.serverTungstenVeinCount")
-                .defineInRange("TungstenVeinCount", 5, 1, Integer.MAX_VALUE);
-        serverTungstenBottomHeight = builder
-                .comment("Tungsten ore minimum height")
-                .translation(SimpleTungsten.MODID + ".config.serverTungstenBottomHeight")
-                .defineInRange("TungstenBottomHeight", -58, -63, 254);
-        serverTungstenMaxHeight = builder
-                .comment("Tungsten ore maximum height")
-                .translation(SimpleTungsten.MODID + ".config.serverTungstenMaxHeight")
-                .defineInRange("TungstenMaxHeight", 18, 1, 255);
-        builder.pop();
-        builder.pop();
+//	    builder.push("OreGeneration");
+//	    serverEnableTungstenOre = builder
+//                .comment("Enable tungsten ore generation?")
+//                .translation(SimpleTungsten.MODID + ".config.enableTungstenOre")
+//                .define("EnableTungstenOre", true);
+//        builder.push("Tungsten");
+//        serverTungstenVeinSize = builder
+//                .comment("Tungsten ore vein size")
+//                .translation(SimpleTungsten.MODID + ".config.serverTungstenVeinSize")
+//                .defineInRange("TungstenVeinSize", 5, 1, Integer.MAX_VALUE);
+//        serverTungstenVeinCount = builder
+//                .comment("Tungsten ore vein count per chunk")
+//                .translation(SimpleTungsten.MODID + ".config.serverTungstenVeinCount")
+//                .defineInRange("TungstenVeinCount", 5, 1, Integer.MAX_VALUE);
+//        serverTungstenBottomHeight = builder
+//                .comment("Tungsten ore minimum height")
+//                .translation(SimpleTungsten.MODID + ".config.serverTungstenBottomHeight")
+//                .defineInRange("TungstenBottomHeight", -58, -63, 254);
+//        serverTungstenMaxHeight = builder
+//                .comment("Tungsten ore maximum height")
+//                .translation(SimpleTungsten.MODID + ".config.serverTungstenMaxHeight")
+//                .defineInRange("TungstenMaxHeight", 18, 1, 255);
+//        builder.pop();
+//        builder.pop();
         
         builder.push("Recipes");
         serverEnableTungstenRecipes = builder.comment("false disables recipes")

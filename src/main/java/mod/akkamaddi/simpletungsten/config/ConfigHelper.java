@@ -14,7 +14,7 @@ public final class ConfigHelper
 
     public static void bakeServer(final ModConfig config)
     {
-        SimpleTungstenConfig.enableTungstenOre = ConfigHolder.SERVER.serverEnableTungstenOre.get();
+//        SimpleTungstenConfig.enableTungstenOre = ConfigHolder.SERVER.serverEnableTungstenOre.get();
         SimpleTungstenConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
  

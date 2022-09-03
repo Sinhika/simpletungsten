@@ -2,7 +2,7 @@ package mod.akkamaddi.simpletungsten.init;
 
 import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,11 +26,11 @@ public final class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleTungsten.MODID);
     
     // Ore Block
-    public static final RegistryObject<OreBlock> tungsten_ore = BLOCKS.register("tungsten_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> tungsten_ore = BLOCKS.register("tungsten_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 10.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> deepslate_tungsten_ore = BLOCKS.register("deepslate_tungsten_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> deepslate_tungsten_ore = BLOCKS.register("deepslate_tungsten_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 10.0F).requiresCorrectToolForDrops()));
     
     // Storage Blocks
