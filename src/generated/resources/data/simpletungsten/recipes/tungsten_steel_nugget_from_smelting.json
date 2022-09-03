@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.2,
   "ingredient": [
     {
       "item": "simpletungsten:tungsten_steel_axe"
@@ -29,7 +31,5 @@
       "item": "simpletungsten:tungsten_steel_sword"
     }
   ],
-  "result": "simpletungsten:tungsten_steel_nugget",
-  "experience": 0.2,
-  "cookingtime": 200
+  "result": "simpletungsten:tungsten_steel_nugget"
 }

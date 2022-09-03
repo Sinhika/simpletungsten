@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.2,
   "ingredient": {
     "item": "simpletungsten:large_tungsten_steel_chunk"
   },
-  "result": "simpletungsten:tungsten_steel_ingot",
-  "experience": 1.2,
-  "cookingtime": 100
+  "result": "simpletungsten:tungsten_steel_ingot"
 }

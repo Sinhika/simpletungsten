@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "recycling_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 20.0,
         "inputs": [
           [
             {
@@ -23,15 +28,10 @@
             "item": "minecraft:gravel"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
-          "item": "simpletungsten:raw_tungsten",
-          "count": 2
-        },
-        "cookingtime": 600,
-        "experience": 20.0
+          "count": 2,
+          "item": "simpletungsten:raw_tungsten"
+        }
       }
     }
   ]

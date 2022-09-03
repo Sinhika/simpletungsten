@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "prasinos_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "prasinos_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "item": "simpletungsten:prasinos_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "simpletungsten:prasinos_leggings"
         }

@@ -1,5 +1,4 @@
 {
-  "replace": false,
   "values": [
     "#forge:storage_block/tungsten",
     "#forge:storage_block/raw_tungsten",

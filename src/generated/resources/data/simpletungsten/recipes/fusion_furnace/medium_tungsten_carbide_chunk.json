@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "tungsten_carbide_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "tungsten_carbide_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 16.0,
         "inputs": [
           {
             "tag": "forge:ingots/tungsten"
@@ -18,14 +23,9 @@
             "item": "minecraft:brick"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
           "item": "simpletungsten:medium_tungsten_carbide_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 16.0
+        }
       }
     }
   ]

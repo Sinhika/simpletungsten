@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "valfram_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "valfram_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:gunpowder"
+        },
+        "cookingtime": 600,
+        "experience": 10.0,
         "inputs": [
           {
             "tag": "forge:ingots/tungsten"
@@ -18,14 +23,9 @@
             "item": "minecraft:nether_brick"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:gunpowder"
-        },
         "output": {
           "item": "simpletungsten:valfram_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 10.0
+        }
       }
     }
   ]

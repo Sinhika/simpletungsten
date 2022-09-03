@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.4,
   "ingredient": {
     "item": "simpletungsten:large_valfram_chunk"
   },
-  "result": "simpletungsten:valfram_ingot",
-  "experience": 1.4,
-  "cookingtime": 200
+  "result": "simpletungsten:valfram_ingot"
 }

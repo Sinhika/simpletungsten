@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "tungsten_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "tungsten_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "   "
-        ],
         "key": {
           "S": {
             "item": "simpletungsten:tungsten_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "   "
+        ],
         "result": {
           "item": "simpletungsten:tungsten_helmet"
         }

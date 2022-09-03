@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "prasinos_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "prasinos_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S ",
-          " S ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simpletungsten:prasinos_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " S ",
+          " S ",
+          " T "
+        ],
         "result": {
           "item": "simpletungsten:prasinos_sword"
         }

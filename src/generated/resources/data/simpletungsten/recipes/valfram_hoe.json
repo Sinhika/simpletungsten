@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "valfram_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "valfram_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SS ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simpletungsten:valfram_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SS ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simpletungsten:valfram_hoe"
         }

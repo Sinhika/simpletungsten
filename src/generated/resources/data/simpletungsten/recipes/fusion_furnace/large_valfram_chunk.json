@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "valfram_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "valfram_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:lava_bucket"
+        },
+        "cookingtime": 600,
+        "experience": 40.0,
         "inputs": [
           {
             "tag": "forge:ingots/tungsten"
@@ -18,14 +23,9 @@
             "item": "minecraft:nether_brick"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:lava_bucket"
-        },
         "output": {
           "item": "simpletungsten:large_valfram_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 40.0
+        }
       }
     }
   ]

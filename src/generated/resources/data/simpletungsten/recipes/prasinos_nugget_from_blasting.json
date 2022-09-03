@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.2,
   "ingredient": [
     {
       "item": "simpletungsten:prasinos_axe"
@@ -29,7 +31,5 @@
       "item": "simpletungsten:prasinos_sword"
     }
   ],
-  "result": "simpletungsten:prasinos_nugget",
-  "experience": 0.2,
-  "cookingtime": 100
+  "result": "simpletungsten:prasinos_nugget"
 }

@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.2,
   "ingredient": [
     {
       "item": "simpletungsten:valfram_axe"
@@ -29,7 +31,5 @@
       "item": "simpletungsten:valfram_sword"
     }
   ],
-  "result": "simpletungsten:valfram_nugget",
-  "experience": 0.2,
-  "cookingtime": 100
+  "result": "simpletungsten:valfram_nugget"
 }

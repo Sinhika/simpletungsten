@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "tungsten_carbide_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "tungsten_carbide_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S ",
-          " S ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simpletungsten:tungsten_carbide_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " S ",
+          " S ",
+          " T "
+        ],
         "result": {
           "item": "simpletungsten:tungsten_carbide_sword"
         }

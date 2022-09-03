@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "tungsten_steel_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "tungsten_steel_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "forge:ingots/tin"
+        },
+        "cookingtime": 600,
+        "experience": 26.0,
         "inputs": [
           {
             "tag": "forge:ingots/tungsten"
@@ -18,14 +23,9 @@
             "item": "minecraft:iron_ingot"
           }
         ],
-        "catalyst": {
-          "tag": "forge:ingots/tin"
-        },
         "output": {
           "item": "simpletungsten:large_tungsten_steel_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 26.0
+        }
       }
     }
   ]

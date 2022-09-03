@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "prasinos_recipes",
-          "type": "simpletungsten:flag"
+          "type": "simpletungsten:flag",
+          "flag": "prasinos_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:glowstone_dust"
+        },
+        "cookingtime": 600,
+        "experience": 12.0,
         "inputs": [
           {
             "tag": "forge:ingots/tungsten"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/adamantium"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:glowstone_dust"
-        },
         "output": {
           "item": "simpletungsten:prasinos_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 12.0
+        }
       }
     }
   ]
