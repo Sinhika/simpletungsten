@@ -22,7 +22,7 @@ made with tungsten, and two tungsten alloys.
 [[dependencies.simpletungsten]]
     modId="forge"
     mandatory=true
-    versionRange="43.1.0,)"
+    versionRange="43.1.0,44)"
     ordering="NONE"
     side="BOTH"
 
