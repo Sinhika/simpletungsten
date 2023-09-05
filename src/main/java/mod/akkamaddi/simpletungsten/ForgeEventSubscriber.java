@@ -8,7 +8,7 @@ import mod.akkamaddi.simpletungsten.content.SimpleTungstenArmorMaterial;
 import mod.akkamaddi.simpletungsten.loot.SimpleTungstenInjectionLookup;
 import mod.alexndr.simplecorelib.api.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.api.helpers.LootUtils;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -52,10 +52,10 @@ public final class ForgeEventSubscriber
             LOGGER.debug("caught LivingAttackEvent");
 
             // falling anvils and other impact damage, wearing full suit of tungsten carbide?
-            if (( event.getSource() == DamageSource.ANVIL 
-                 || event.getSource() == DamageSource.FALLING_BLOCK
-                 || event.getSource() == DamageSource.FLY_INTO_WALL
-                 || event.getSource() == DamageSource.IN_WALL) 
+            if (( event.getSource().is(DamageTypes.FALLING_ANVIL)
+                 || event.getSource().is(DamageTypes.FALLING_BLOCK)
+                 || event.getSource().is(DamageTypes.FLY_INTO_WALL)
+                 || event.getSource().is(DamageTypes.IN_WALL))
                 &&
                 ArmorUtils.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.TUNGSTEN_CARBIDE))
             {
@@ -63,7 +63,13 @@ public final class ForgeEventSubscriber
                 if (event.isCancelable()) event.setCanceled(true);
                 LOGGER.debug("Canceled impact damage because of tungsten carbide");
             } // end-if full set of tungsten carbide and impact damage
-            else if ( event.getSource().isFire()
+            else if ( (event.getSource().is(DamageTypes.IN_FIRE)
+            		 || event.getSource().is(DamageTypes.FIREBALL)
+            		 || event.getSource().is(DamageTypes.LAVA)
+            		 || event.getSource().is(DamageTypes.HOT_FLOOR)
+            		 || event.getSource().is(DamageTypes.ON_FIRE)
+            		 || event.getSource().is(DamageTypes.FIREWORKS)
+            		 || event.getSource().is(DamageTypes.UNATTRIBUTED_FIREBALL))
                      && ArmorUtils.isPlayerWearingFullSet(player, SimpleTungstenArmorMaterial.VALFRAM))
             {
                 // pro-forma cancelable check.

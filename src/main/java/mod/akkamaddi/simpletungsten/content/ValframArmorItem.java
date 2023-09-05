@@ -5,7 +5,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
@@ -17,9 +16,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class ValframArmorItem extends ArmorItem
 {
 
-    public ValframArmorItem(ArmorMaterial materialIn, EquipmentSlot slot, Properties builder)
+    public ValframArmorItem(ArmorMaterial materialIn, Type slotType, Properties builder)
     {
-        super(materialIn, slot, builder);
+        super(materialIn, slotType, builder);
     }
     
     @Override
