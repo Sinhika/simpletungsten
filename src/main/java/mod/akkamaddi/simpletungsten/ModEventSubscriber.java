@@ -9,7 +9,7 @@ import mod.akkamaddi.simpletungsten.config.ConfigHelper;
 import mod.akkamaddi.simpletungsten.config.ConfigHolder;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
-import mod.akkamaddi.simpletungsten.init.ModTabGroups;
+import mod.akkamaddi.simpletungsten.init.ModCreativeTabs;
 import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -78,7 +78,7 @@ public final class ModEventSubscriber
                     {
                         // Make the properties, and make it so that the item will be on our ItemGroup
                         // (CreativeTab)
-                        Item.Properties properties = new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP);
+                        Item.Properties properties = new Item.Properties().tab(ModCreativeTabs.MOD_ITEM_GROUP);
                         // Create the new BlockItem with the block and it's properties
                         BlockItem blockItem = new BlockItem(block, properties);
                         // Register the BlockItem
