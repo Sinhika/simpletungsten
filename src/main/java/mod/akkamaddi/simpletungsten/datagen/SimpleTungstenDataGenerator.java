@@ -5,12 +5,6 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import mod.akkamaddi.arsenic.datagen.ArsenicLootInjectorSubprovider;
-import mod.akkamaddi.arsenic.datagen.ArsenicLootTableSubprovider;
-import mod.akkamaddi.arsenic.datagen.FusionRecipes;
-import mod.akkamaddi.arsenic.datagen.ModBlockTags;
-import mod.akkamaddi.arsenic.datagen.ModItemTags;
-import mod.akkamaddi.arsenic.datagen.Recipes;
 import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.alexndr.simplecorelib.api.datagen.SimpleLootTableProvider;
 import net.minecraft.core.HolderLookup;
@@ -57,10 +51,6 @@ public class SimpleTungstenDataGenerator
             			new LootTableProvider.SubProviderEntry(TungstenLootTableSubprovider::new, LootContextParamSets.BLOCK),
                 		new LootTableProvider.SubProviderEntry( TungstenLootInjectorSubprovider::new, LootContextParamSets.CHEST)
                 		)));
-//        gen.addProvider(event.includeServer(), new Recipes(gen));
-//        gen.addProvider(event.includeServer(), new FusionRecipes(gen));
-//        gen.addProvider(event.includeServer(), new ModItemTags(gen, event.getExistingFileHelper()));
-//        gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));
 
     } // end gatherData()
 } // end class
