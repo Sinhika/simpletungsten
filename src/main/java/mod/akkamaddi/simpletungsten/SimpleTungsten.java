@@ -5,8 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simpletungsten.config.ConfigHolder;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
+import mod.akkamaddi.simpletungsten.init.ModCreativeTabs;
 import mod.akkamaddi.simpletungsten.init.ModItems;
-import mod.alexndr.fusion.init.ModCreativeTabs;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
