@@ -127,5 +127,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "simpletungsten:inject/simple_dungeon"
 }

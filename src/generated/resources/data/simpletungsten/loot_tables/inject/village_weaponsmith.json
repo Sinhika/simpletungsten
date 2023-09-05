@@ -41,5 +41,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "simpletungsten:inject/village_weaponsmith"
 }

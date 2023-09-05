@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "item": "simpletungsten:tungsten_carbide_ingot"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "simpletungsten:tungsten_carbide_block"
-  }
+  },
+  "show_notification": true
 }
