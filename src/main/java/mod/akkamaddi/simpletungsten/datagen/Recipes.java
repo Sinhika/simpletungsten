@@ -8,7 +8,7 @@ import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModItems;
 import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -19,14 +19,14 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 {
     private RecipeSetBuilder setbuilder;
 
-    public Recipes(DataGenerator pGenerator)
+    public Recipes(PackOutput pOutput)
     {
-        super(pGenerator);
+        super(pOutput);
         setbuilder = new RecipeSetBuilder(SimpleTungsten.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer)
+    protected void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer)
     {
         registerStorageRecipes(pFinishedRecipeConsumer);
         registerToolRecipes(pFinishedRecipeConsumer);

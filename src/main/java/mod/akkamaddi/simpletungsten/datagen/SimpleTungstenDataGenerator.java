@@ -2,8 +2,23 @@ package mod.akkamaddi.simpletungsten.datagen;
 
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+
+import mod.akkamaddi.arsenic.datagen.ArsenicLootInjectorSubprovider;
+import mod.akkamaddi.arsenic.datagen.ArsenicLootTableSubprovider;
+import mod.akkamaddi.arsenic.datagen.FusionRecipes;
+import mod.akkamaddi.arsenic.datagen.ModBlockTags;
+import mod.akkamaddi.arsenic.datagen.ModItemTags;
+import mod.akkamaddi.arsenic.datagen.Recipes;
 import mod.akkamaddi.simpletungsten.SimpleTungsten;
+import mod.alexndr.simplecorelib.api.datagen.SimpleLootTableProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -24,11 +39,28 @@ public class SimpleTungstenDataGenerator
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator gen = event.getGenerator();
-        gen.addProvider(event.includeServer(), new Recipes(gen));
-        gen.addProvider(event.includeServer(), new FusionRecipes(gen));
-        gen.addProvider(event.includeServer(), new ModItemTags(gen, event.getExistingFileHelper()));
-        gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));
-        gen.addProvider(event.includeServer(), new SimpleTungstenLootTableProvider(gen));
-        gen.addProvider(event.includeServer(), new SimpleTungstenLootInjectorProvider(gen));
+        PackOutput packOutput = gen.getPackOutput();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();		
+
+        // server side
+        ModBlockTags blockTags = new ModBlockTags(packOutput, lookupProvider, existingFileHelper);
+        gen.addProvider(event.includeServer(), blockTags);
+        gen.addProvider(event.includeServer(),
+            	new ModItemTags(packOutput, lookupProvider, blockTags.contentsGetter(), event.getExistingFileHelper()));
+
+        gen.addProvider(event.includeServer(), new Recipes(packOutput));
+        gen.addProvider(event.includeServer(), new FusionRecipes(packOutput));
+        
+        gen.addProvider(event.includeServer(), 
+            	new SimpleLootTableProvider(packOutput, List.of(
+            			new LootTableProvider.SubProviderEntry(TungstenLootTableSubprovider::new, LootContextParamSets.BLOCK),
+                		new LootTableProvider.SubProviderEntry( TungstenLootInjectorSubprovider::new, LootContextParamSets.CHEST)
+                		)));
+//        gen.addProvider(event.includeServer(), new Recipes(gen));
+//        gen.addProvider(event.includeServer(), new FusionRecipes(gen));
+//        gen.addProvider(event.includeServer(), new ModItemTags(gen, event.getExistingFileHelper()));
+//        gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));
+
     } // end gatherData()
 } // end class

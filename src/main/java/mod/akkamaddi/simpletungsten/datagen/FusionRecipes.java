@@ -8,10 +8,10 @@ import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.akkamaddi.simpletungsten.config.SimpleTungstenConfig;
 import mod.akkamaddi.simpletungsten.init.ModItems;
 import mod.akkamaddi.simpletungsten.init.ModTags;
+import mod.alexndr.fusion.api.datagen.AbstractFusionRecipeProvider;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
-import mod.alexndr.fusion.api.recipe.AbstractFusionRecipeProvider;
 import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
@@ -25,14 +25,14 @@ public class FusionRecipes extends AbstractFusionRecipeProvider  implements ICon
     private FusionRecipeSetBuilder fusionbuilder;
 
 
-    public FusionRecipes(DataGenerator generatorIn)
+    public FusionRecipes(PackOutput pOutput)
     {
-        super(generatorIn);
+        super(pOutput);
         fusionbuilder = new FusionRecipeSetBuilder(SimpleTungsten.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerTungstenRecyclingRecipes(consumer);
         registerTungstenSteelRecipes(consumer);

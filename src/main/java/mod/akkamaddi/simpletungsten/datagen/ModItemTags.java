@@ -1,30 +1,36 @@
 package mod.akkamaddi.simpletungsten.datagen;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import mod.akkamaddi.simpletungsten.SimpleTungsten;
 import mod.akkamaddi.simpletungsten.init.ModBlocks;
 import mod.akkamaddi.simpletungsten.init.ModItems;
 import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
 import mod.alexndr.simplecorelib.api.helpers.TagUtils;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemTags extends MiningItemTags
 {
 
-    public ModItemTags(DataGenerator gen, ExistingFileHelper existingFileHelper)
+    public ModItemTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
+			CompletableFuture<TagLookup<Block>> blockTagProvider, ExistingFileHelper existingFileHelper)
     {
-        super(gen, new ModBlockTags(gen, existingFileHelper), SimpleTungsten.MODID, existingFileHelper);
+        super(output, lookupProvider, blockTagProvider, SimpleTungsten.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags()
+    protected void addTags(HolderLookup.Provider lookupProvider)
     {
-        super.addTags();
+        super.addTags(lookupProvider);
         registerNuggetTags();
         registerIngotTags();
         registerStorageBlockTags();
+        registerToolTags(ModItems.ITEMS);
+        registerArmorTags(ModItems.ITEMS);
     }
 
     @Override
